@@ -1,0 +1,5 @@
+let v = makeVector(5,"bonjour") in print(vectorGet(v,1));
+newline();
+let x=2 in 
+    let v1 = makeVector(10,x) in
+        print(vectorLength(v1));

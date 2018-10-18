@@ -1,0 +1,1 @@
+let x = sinus(0) in print(x);

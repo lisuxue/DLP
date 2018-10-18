@@ -1,0 +1,1 @@
+if (16 < 2) then print("impossible") else 162

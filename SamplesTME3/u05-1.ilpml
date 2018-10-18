@@ -1,0 +1,5 @@
+let z=10 in print(z); 
+newline();
+"bonjour";
+let x=2 and y=3 in x+y;
+let a= if true then 1+2+3 else 2+2 in print(a);

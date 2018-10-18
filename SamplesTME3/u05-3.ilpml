@@ -1,0 +1,1 @@
+let v2 = makeVector(2,"bonbon") in print(v2);

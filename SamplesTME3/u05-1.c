@@ -1,0 +1,127 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "ilp.h"
+
+/* Global variables */
+ILP_Object print;
+ILP_Object newline;
+
+/* Global prototypes */
+
+/* Global functions */
+
+
+ILP_Object
+ilp_program ()
+{
+  {
+    ILP_Object ilptmp16;
+    {
+      ILP_Object ilptmp17;
+      ilptmp17 = ILP_Integer2ILP (10);
+
+      {
+	ILP_Object z1 = ilptmp17;
+	{
+	  ILP_Object ilptmp18;
+	  ilptmp18 = z1;
+	  ilptmp16 = ILP_print (ilptmp18);
+	}
+
+      }
+    }
+    {
+      ilptmp16 = ILP_newline ();
+    }
+    ilptmp16 = ILP_String2ILP ("bonjour");
+    {
+      ILP_Object ilptmp19;
+      ILP_Object ilptmp20;
+      ilptmp19 = ILP_Integer2ILP (2);
+      ilptmp20 = ILP_Integer2ILP (3);
+
+      {
+	ILP_Object x2 = ilptmp19;
+	ILP_Object y3 = ilptmp20;
+	{
+	  ILP_Object ilptmp21;
+	  ILP_Object ilptmp22;
+	  ilptmp21 = x2;
+	  ilptmp22 = y3;
+	  ilptmp16 = ILP_Plus (ilptmp21, ilptmp22);
+	}
+
+      }
+    }
+    {
+      ILP_Object ilptmp23;
+      {
+	ILP_Object ilptmp24;
+	ilptmp24 = ILP_TRUE;
+	if (ILP_isEquivalentToTrue (ilptmp24))
+	  {
+	    {
+	      ILP_Object ilptmp25;
+	      ILP_Object ilptmp26;
+	      {
+		ILP_Object ilptmp27;
+		ILP_Object ilptmp28;
+		ilptmp27 = ILP_Integer2ILP (1);
+		ilptmp28 = ILP_Integer2ILP (2);
+		ilptmp25 = ILP_Plus (ilptmp27, ilptmp28);
+	      }
+	      ilptmp26 = ILP_Integer2ILP (3);
+	      ilptmp23 = ILP_Plus (ilptmp25, ilptmp26);
+	    }
+
+	  }
+	else
+	  {
+	    {
+	      ILP_Object ilptmp29;
+	      ILP_Object ilptmp30;
+	      ilptmp29 = ILP_Integer2ILP (2);
+	      ilptmp30 = ILP_Integer2ILP (2);
+	      ilptmp23 = ILP_Plus (ilptmp29, ilptmp30);
+	    }
+
+	  }
+      }
+
+      {
+	ILP_Object a4 = ilptmp23;
+	{
+	  ILP_Object ilptmp31;
+	  ilptmp31 = a4;
+	  ilptmp16 = ILP_print (ilptmp31);
+	}
+
+      }
+    }
+    return ilptmp16;
+  }
+
+}
+
+static ILP_Object
+ilp_caught_program ()
+{
+  struct ILP_catcher *current_catcher = ILP_current_catcher;
+  struct ILP_catcher new_catcher;
+
+  if (0 == setjmp (new_catcher._jmp_buf))
+    {
+      ILP_establish_catcher (&new_catcher);
+      return ilp_program ();
+    };
+  return ILP_current_exception;
+}
+
+int
+main (int argc, char *argv[])
+{
+  ILP_START_GC;
+  ILP_print (ilp_caught_program ());
+  ILP_newline ();
+  return EXIT_SUCCESS;
+}
