@@ -14,7 +14,7 @@ import com.paracamplus.ilp2.interfaces.IASTloop;
 import com.paracamplus.ilp2.ilp2tme4.ex2.interfaces.IASTunless;
 import com.paracamplus.ilp2.ilp2tme4.ex2.interfaces.IASTvisitor;
 import com.paracamplus.ilp1.interfaces.IASTinvocation;
-import com.paracamplus.ilp1.interfaces.IASTprogram;
+import com.paracamplus.ilp2.interfaces.IASTprogram;
 import com.paracamplus.ilp1.interfaces.IASTsequence;
 import com.paracamplus.ilp1.interfaces.IASTstring;
 import com.paracamplus.ilp1.interfaces.IASTunaryOperation;
@@ -34,7 +34,7 @@ public class PasseTransformUnless implements IASTvisitor<IASTexpression, Void, E
 	private IASTfactory factory;
 	
 	public IASTprogram visit(IASTprogram iast, Void data) throws EvaluationException {
-        return factory.newProgram(iast.getBody().accept(this, data));
+        return (IASTprogram) factory.newProgram(iast.getBody().accept(this, data));
     }
 	
 	public PasseTransformUnless(IASTfactory factory) {
