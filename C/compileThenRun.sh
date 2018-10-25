@@ -80,7 +80,7 @@ esac
   if $RECOMPILE
   then 
       echo "Compilation de la bibliotheque d'execution d'ILP..." >&2
-      make clean
+      # make clean
       if make work
       then :
       else

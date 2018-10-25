@@ -1,0 +1,6 @@
+let x = 4 in (
+    while x > 0 do (
+        if (x==2) then break else print(x);
+        x = x-1;
+    );
+    x)

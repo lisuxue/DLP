@@ -26,21 +26,20 @@ implements IASTvisitor<Object, ILexicalEnvironment, EvaluationException> {
 	}
 
 
-
+    private static Object whatever = "whatever";
+    
 	@Override
 	public Object visit(IASTunless iast, ILexicalEnvironment lexenv) throws EvaluationException {
 		 Object c = iast.getCondition().accept(this, lexenv);
 	        if ( c != null && c instanceof Boolean ) {
 	            Boolean b = (Boolean) c;
 	            if ( b.booleanValue() ) {
-	                return iast.getConsequence().accept(this, lexenv);
-	            } else if ( iast.isTernary() ) {
-	                return iast.getAlternant().accept(this, lexenv);                
+	            	return whatever;             
 	            } else {
-	                return whatever;
+	            	return iast.getBody().accept(this, lexenv);
 	            }
 	        } else {
-	            return iast.getConsequence().accept(this, lexenv);
+	            return iast.getBody().accept(this, lexenv);
 	        }
 	}
     
