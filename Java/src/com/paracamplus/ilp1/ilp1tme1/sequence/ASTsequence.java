@@ -1,7 +1,6 @@
 package com.paracamplus.ilp1.ilp1tme1.sequence;
 
 import com.paracamplus.ilp1.interfaces.IASTexpression;
-import com.paracamplus.ilp1.interfaces.IASTvisitor;
 import com.paracamplus.ilp1.interpreter.interfaces.EvaluationException;
 
 public class ASTsequence extends com.paracamplus.ilp1.ast.ASTsequence implements com.paracamplus.ilp1.ilp1tme1.sequence.IASTsequence {

@@ -45,7 +45,7 @@ expr returns [com.paracamplus.ilp1.interfaces.IASTexpression node]
 // boucle
     | 'while' condition=expr 'do' body=expr # Loop
     
-//echappement
+// echappement
     | 'break' # Break
     | 'continue' # Continue
     ;

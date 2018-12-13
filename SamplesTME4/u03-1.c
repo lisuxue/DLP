@@ -14,9 +14,9 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp8;
-    ilptmp8 = ILP_String2ILP ("bonjour");
-    return ILP_print (ilptmp8);
+    ILP_Object ilptmp6;
+    ilptmp6 = ILP_String2ILP ("bonjour");
+    return ILP_print (ilptmp6);
   }
 
 }

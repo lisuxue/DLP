@@ -13,18 +13,18 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp14;
-    ilptmp14 = ILP_Integer2ILP (2);
+    ILP_Object ilptmp54;
+    ilptmp54 = ILP_Integer2ILP (2);
 
     {
-      ILP_Object x1 = ilptmp14;
+      ILP_Object x1 = ilptmp54;
       {
-	ILP_Object ilptmp15;
+	ILP_Object ilptmp55;
 	while (1)
 	  {
-	    ILP_Object ilptmp16;
-	    ilptmp16 = ILP_TRUE;
-	    if (ILP_isEquivalentToTrue (ilptmp16))
+	    ILP_Object ilptmp56;
+	    ilptmp56 = ILP_TRUE;
+	    if (ILP_isEquivalentToTrue (ilptmp56))
 	      {
 		break;
 
@@ -35,9 +35,9 @@ ilp_program ()
 
 	      }
 	  }
-	ilptmp15 = ILP_FALSE;
-	ilptmp15 = x1;
-	return ilptmp15;
+	ilptmp55 = ILP_FALSE;
+	ilptmp55 = x1;
+	return ilptmp55;
       }
 
     }

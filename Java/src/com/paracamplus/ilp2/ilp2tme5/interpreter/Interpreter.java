@@ -13,7 +13,11 @@ import com.paracamplus.ilp2.interfaces.IASTassignment;
 import com.paracamplus.ilp2.interfaces.IASTloop;
 import com.paracamplus.ilp2.interfaces.IASTfunctionDefinition;
 import com.paracamplus.ilp2.interfaces.IASTprogram;
-import com.paracamplus.ilp2.interfaces.IASTvisitor;
+import com.paracamplus.ilp2.ilp2tme5.compiler.BreakException;
+import com.paracamplus.ilp2.ilp2tme5.compiler.ContinueException;
+import com.paracamplus.ilp2.ilp2tme5.interfaces.IASTbreak;
+import com.paracamplus.ilp2.ilp2tme5.interfaces.IASTcontinue;
+import com.paracamplus.ilp2.ilp2tme5.interfaces.IASTvisitor;
 import com.paracamplus.ilp1.interfaces.IASTinvocation;
 import com.paracamplus.ilp1.interfaces.IASTvariable;
 import com.paracamplus.ilp1.interfaces.IASTexpression;
@@ -31,10 +35,12 @@ implements IASTvisitor<Object, ILexicalEnvironment, EvaluationException> {
     
 
     // 
+	protected int cptwhile;
     
     public Interpreter(IGlobalVariableEnvironment globalVariableEnvironment,
 			IOperatorEnvironment operatorEnvironment) {
 		super(globalVariableEnvironment, operatorEnvironment);
+		cptwhile=0;
 	}
 
     @Override
@@ -113,16 +119,42 @@ implements IASTvisitor<Object, ILexicalEnvironment, EvaluationException> {
                     break;
                 }
             }
-            //try
-            iast.getBody().accept(this, lexenv);
-            //catch(Break)
+            cptwhile++;
+            try{
+            	iast.getBody().accept(this, lexenv);
+            }catch(ContinueException ce){
+            	continue;
+            }catch(BreakException be){
+            	break;
+            }
             // return Boolean.False
             //catch(Continue)
             //{}
             
         }
+        cptwhile--;
         return Boolean.FALSE;
     }
+
+	@Override
+	public Object visit(IASTcontinue iast, ILexicalEnvironment data)
+			throws EvaluationException {
+		if (cptwhile<1) {
+			throw new EvaluationException("continue n'est pas dans une while");
+		}else{
+			throw new ContinueException();
+		}
+	}
+
+	@Override
+	public Object visit(IASTbreak iast, ILexicalEnvironment data)
+			throws EvaluationException {
+		if (cptwhile<1){
+			throw new EvaluationException("break n'est pas dans une while");
+		}else{
+			throw new BreakException();
+		}
+	}
 
 
 }

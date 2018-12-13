@@ -5,28 +5,35 @@
 /* Global variables */ 
 ILP_Object print;
 
+/* Global prototypes */ 
+
+/* Global functions */ 
+
+
+/* Classes */ 
+
 
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp251; 
+  ILP_Object ilptmp2816; 
 { 
-  ILP_Object ilptmp252; 
-ilptmp252 = ILP_TRUE; 
-  if ( ILP_isEquivalentToTrue(ilptmp252 ) ) {
+  ILP_Object ilptmp2817; 
+ilptmp2817 = ILP_TRUE; 
+  if ( ILP_isEquivalentToTrue(ilptmp2817 ) ) {
 { 
-  ILP_Object ilptmp253; 
-ilptmp253 =  ILP_String2ILP("invisible"); 
-ilptmp251 = ILP_print(ilptmp253);
+  ILP_Object ilptmp2818; 
+ilptmp2818 =  ILP_String2ILP("invisible"); 
+ilptmp2816 = ILP_print(ilptmp2818);
 }
 
   } else {
-ilptmp251 = ILP_FALSE; 
+ilptmp2816 = ILP_FALSE; 
 
   }
 }
-ilptmp251 = ILP_Integer2ILP(48); 
-return ilptmp251; 
+ilptmp2816 = ILP_Integer2ILP(48); 
+return ilptmp2816; 
 } 
 
 } 

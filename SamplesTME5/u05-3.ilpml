@@ -1,0 +1,12 @@
+let a=1 and b=3 in 
+(
+	while (a<b) do (
+		print(a);
+		print(b);
+		a=a+1;
+		while true do break;
+		print("sortie while2");
+		newline();
+		);
+	print(b);
+	)

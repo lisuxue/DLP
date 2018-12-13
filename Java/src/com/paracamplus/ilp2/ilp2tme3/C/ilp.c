@@ -1016,11 +1016,17 @@ ILP_print (ILP_Object self)
      } else if ( self->_class == &ILP_object_Vector_class ) {
      	  int taille = self->_content.asVector.size;
      	  fprintf(stdout, "%s", "[");
-     	  for (int i=0;i<taille;i++){
+     	  int i;
+     	  for (i=0;i<taille;i++){
      	  	ILP_print(self->_content.asVector.asILP_Object[i]);
-     	  	 fprintf(stdout, "%s", ",");
+     	  	if (i==taille-1){
+     	  	    fprintf(stdout, "%s", "]");
+     	  	}
+     	  	else{
+     	  	    fprintf(stdout, "%s", ",");
+     	  	}
      	  }
-     	  fprintf(stdout, "%s", "]");
+     	  
      } else {
           fprintf(stdout, "<%s", self->_class->_content.asClass.name);
           ILP_print_fields(self, self->_class->_content.asClass.last_field);

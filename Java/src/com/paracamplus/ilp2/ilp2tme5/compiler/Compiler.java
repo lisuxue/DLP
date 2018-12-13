@@ -323,7 +323,7 @@ implements IASTvisitor<Void, Compiler.Context, CompilationException>{
     	throws CompilationException {
     	emit("break; \n");
     	if (cptwhile <= 0)
-    		throw new BreakException(new Exception("Break not in while"));
+    		throw new CompilationException("Break not in while");
     	return null;
     } 
     
@@ -331,7 +331,7 @@ implements IASTvisitor<Void, Compiler.Context, CompilationException>{
         throws CompilationException {
     	emit("continue; \n");
     	if (cptwhile <= 0 )
-    		throw new ContinueException(new Exception("Continue not in while"));
+    		throw new CompilationException("Continue not in while");
     	return null;
     }
 

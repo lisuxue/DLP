@@ -1,10 +1,10 @@
 GC_check_heap_block: found smashed heap objects:
- 0x55e71249efe8 in or near object at 0x55e71249efc0 (tests/smash_test.c:22, sz=40)
+ 0x2345fe8 in or near object at 0x2345fc0 (tests/smash_test.c:22, sz=40)
 
 GC_check_heap_block: found smashed heap objects:
- 0x55e71249efe8 in or near object at 0x55e71249efc0 (tests/smash_test.c:22, sz=40)
+ 0x2345fe8 in or near object at 0x2345fc0 (tests/smash_test.c:22, sz=40)
 
 GC_check_heap_block: found smashed heap objects:
- 0x55e712511f98 in or near object at 0x55e712511f70 (tests/smash_test.c:22, sz=40)
- 0x55e71249efe8 in or near object at 0x55e71249efc0 (tests/smash_test.c:22, sz=40)
+ 0x23b8f98 in or near object at 0x23b8f70 (tests/smash_test.c:22, sz=40)
+ 0x2345fe8 in or near object at 0x2345fc0 (tests/smash_test.c:22, sz=40)
 

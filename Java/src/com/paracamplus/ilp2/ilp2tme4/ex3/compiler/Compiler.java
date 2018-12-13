@@ -13,8 +13,8 @@ import java.util.Set;
 
 import com.paracamplus.ilp1.compiler.AssignDestination;
 import com.paracamplus.ilp1.compiler.CompilationException;
-import com.paracamplus.ilp2.compiler.FreeVariableCollector;
-import com.paracamplus.ilp2.compiler.GlobalVariableCollector;
+import com.paracamplus.ilp2.ilp2tme4.ex3.compiler.FreeVariableCollector;
+import com.paracamplus.ilp2.ilp2tme4.ex3.compiler.GlobalVariableCollector;
 import com.paracamplus.ilp1.compiler.NoDestination;
 import com.paracamplus.ilp1.compiler.ReturnDestination;
 import com.paracamplus.ilp1.compiler.VoidDestination;
@@ -37,11 +37,11 @@ import com.paracamplus.ilp2.interfaces.IASTassignment;
 import com.paracamplus.ilp2.interfaces.IASTfunctionDefinition;
 import com.paracamplus.ilp2.interfaces.IASTloop;
 import com.paracamplus.ilp2.interfaces.IASTprogram;
-import com.paracamplus.ilp2.compiler.interfaces.IASTCvisitor;
+import com.paracamplus.ilp2.ilp2tme4.ex3.interfaces.IASTvisitor;
 
 
 public class Compiler extends com.paracamplus.ilp2.compiler.Compiler 
-implements IASTCvisitor<Void, Compiler.Context, CompilationException>{
+implements IASTvisitor<Void, Compiler.Context, CompilationException>{
     
  
     public Compiler(IOperatorEnvironment ioe, IGlobalVariableEnvironment igve) {
@@ -324,21 +324,19 @@ implements IASTCvisitor<Void, Compiler.Context, CompilationException>{
     
 	public Void visit(IASTunless iast, Context context)
             throws CompilationException {
-        emit("while ( 1 ) { \n");
-        IASTvariable tmp = context.newTemporaryVariable();
-        emit("  ILP_Object " + tmp.getMangledName() + "; \n");
-        Context c = context.redirect(new AssignDestination(tmp));
-        iast.getCondition().accept(this, c);
-        emit("  if ( ILP_isEquivalentToTrue(");
-        emit(tmp.getMangledName());
-        emit(") ) {\n");
-        Context cb = context.redirect(VoidDestination.VOID_DESTINATION);
-        iast.getBody().accept(this, cb);
-        emit("\n} else { \n");
-        emit("    break; \n");
-        emit("\n}\n}\n");
-        whatever.accept(this, context);
-        return null;
+		IASTvariable tmp1 = context.newTemporaryVariable();
+		emit("{ \n");
+		emit(" ILP_Object " + tmp1.getMangledName() + "; \n");
+		Context c = context.redirect(new AssignDestination(tmp1));
+		iast.getCondition().accept(this, c); /* on met le résultat de la compilation de la condition dans la var tmp1 
+		(le nom de tme1 en C est tmp1.getmangledname*/
+		emit(" if ( ILP_isEquivalentToTrue(");
+		emit(tmp1.getMangledName());
+		emit(")) {} \n"); //si la condition est vrai on fait rien
+		emit(" else { \n");
+		iast.getBody().accept(this, context);
+		emit("\n } \n}\n");
+		return null;
     }
     
     

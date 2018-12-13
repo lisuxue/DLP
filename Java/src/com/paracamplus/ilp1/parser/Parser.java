@@ -40,8 +40,8 @@ public class Parser {
     		if (ilpmlparser == null) {
     			throw new ParseException("ILPML parser not set");
     		}
-            ilpmlparser.setInput(input);
-            IASTprogram program = ilpmlparser.getProgram();
+    		ilpmlparser.setInput(input);
+            IASTprogram program = ilpmlparser.getProgram();	
     		return program;
     	}
     	throw new ParseException("file extension not recognized");

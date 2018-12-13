@@ -11,11 +11,11 @@ import java.util.Set;
 import com.paracamplus.ilp1.compiler.CompilationException;
 import com.paracamplus.ilp1.compiler.interfaces.IASTClocalVariable;
 import com.paracamplus.ilp2.compiler.interfaces.IASTCprogram;
-import com.paracamplus.ilp2.compiler.interfaces.IASTCvisitor;
+import com.paracamplus.ilp2.ilp2tme4.ex3.interfaces.IASTvisitor;
 import com.paracamplus.ilp2.ilp2tme4.ex3.interfaces.IASTunless;
 
 public class FreeVariableCollector extends com.paracamplus.ilp2.compiler.FreeVariableCollector
-implements IASTCvisitor<Void, Set<IASTClocalVariable>, CompilationException> {
+implements IASTvisitor<Void, Set<IASTClocalVariable>, CompilationException> {
 
     public FreeVariableCollector(IASTCprogram program) {
         super(program);

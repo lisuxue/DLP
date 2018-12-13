@@ -14,20 +14,20 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp4;
+    ILP_Object ilptmp2;
     {
-      ILP_Object ilptmp5;
-      ILP_Object ilptmp6;
-      ilptmp5 = ILP_Integer2ILP (16);
-      ilptmp6 = ILP_Integer2ILP (2);
-      ilptmp4 = ILP_LessThan (ilptmp5, ilptmp6);
+      ILP_Object ilptmp3;
+      ILP_Object ilptmp4;
+      ilptmp3 = ILP_Integer2ILP (16);
+      ilptmp4 = ILP_Integer2ILP (2);
+      ilptmp2 = ILP_LessThan (ilptmp3, ilptmp4);
     }
-    if (ILP_isEquivalentToTrue (ilptmp4))
+    if (ILP_isEquivalentToTrue (ilptmp2))
       {
 	{
-	  ILP_Object ilptmp7;
-	  ilptmp7 = ILP_String2ILP ("impossible");
-	  return ILP_print (ilptmp7);
+	  ILP_Object ilptmp5;
+	  ilptmp5 = ILP_String2ILP ("impossible");
+	  return ILP_print (ilptmp5);
 	}
 
       }

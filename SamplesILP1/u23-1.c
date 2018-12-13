@@ -4,14 +4,21 @@
 
 /* Global variables */
 
+/* Global prototypes */
+
+/* Global functions */
+
+
+/* Classes */
+
 
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp93;
-    ilptmp93 = ILP_FALSE;
-    if (ILP_isEquivalentToTrue (ilptmp93))
+    ILP_Object ilptmp2658;
+    ilptmp2658 = ILP_FALSE;
+    if (ILP_isEquivalentToTrue (ilptmp2658))
       {
 	return ILP_Integer2ILP (1);
 

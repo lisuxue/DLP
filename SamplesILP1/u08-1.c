@@ -4,14 +4,21 @@
 
 /* Global variables */
 
+/* Global prototypes */
+
+/* Global functions */
+
+
+/* Classes */
+
 
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp41;
-    ilptmp41 = ILP_TRUE;
-    return ILP_Not (ilptmp41);
+    ILP_Object ilptmp2606;
+    ilptmp2606 = ILP_TRUE;
+    return ILP_Not (ilptmp2606);
   }
 
 }

@@ -4,8 +4,8 @@ import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
-import antlr4.ILPMLgrammar2Lexer;
-import antlr4.ILPMLgrammar2Parser;
+import antlr4.ILPMLgrammar2tme4Lexer;
+import antlr4.ILPMLgrammar2tme4Parser;
 import com.paracamplus.ilp2.ilp2tme4.ex3.interfaces.IASTfactory;
 import com.paracamplus.ilp2.interfaces.IASTprogram;
 import com.paracamplus.ilp1.parser.ParseException;
@@ -22,13 +22,13 @@ extends com.paracamplus.ilp2.parser.ilpml.ILPMLParser {
 		try {
 			ANTLRInputStream in = new ANTLRInputStream(input.getText());
 			// flux de caractères -> analyseur lexical
-			ILPMLgrammar2Lexer lexer = new ILPMLgrammar2Lexer(in);
+			ILPMLgrammar2tme4Lexer lexer = new ILPMLgrammar2tme4Lexer(in);
 			// analyseur lexical -> flux de tokens
 			CommonTokenStream tokens =	new CommonTokenStream(lexer);
 			// flux tokens -> analyseur syntaxique
-			ILPMLgrammar2Parser parser = new ILPMLgrammar2Parser(tokens);
+			ILPMLgrammar2tme4Parser parser = new ILPMLgrammar2tme4Parser(tokens);
 			// démarage de l'analyse syntaxique
-			ILPMLgrammar2Parser.ProgContext tree = parser.prog();		
+			ILPMLgrammar2tme4Parser.ProgContext tree = parser.prog();		
 			// parcours de l'arbre syntaxique et appels du Listener
 			ParseTreeWalker walker = new ParseTreeWalker();
 			ILPMLListener extractor = new ILPMLListener((IASTfactory)factory);

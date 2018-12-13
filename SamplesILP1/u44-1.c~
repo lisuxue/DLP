@@ -5,19 +5,26 @@
 /* Global variables */ 
 ILP_Object print;
 
+/* Global prototypes */ 
+
+/* Global functions */ 
+
+
+/* Classes */ 
+
 
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp229; 
+  ILP_Object ilptmp2794; 
 { 
-  ILP_Object ilptmp230; 
-  ILP_Object ilptmp231; 
-ilptmp230 = ILP_Integer2ILP(4); 
-ilptmp231 = ILP_Integer2ILP(5); 
-ilptmp229 = ILP_Equal(ilptmp230, ilptmp231);
+  ILP_Object ilptmp2795; 
+  ILP_Object ilptmp2796; 
+ilptmp2795 = ILP_Integer2ILP(4); 
+ilptmp2796 = ILP_Integer2ILP(5); 
+ilptmp2794 = ILP_Equal(ilptmp2795, ilptmp2796);
 } 
-return ILP_print(ilptmp229);
+return ILP_print(ilptmp2794);
 }
 
 } 

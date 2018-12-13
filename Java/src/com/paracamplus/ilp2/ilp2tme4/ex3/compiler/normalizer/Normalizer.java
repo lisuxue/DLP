@@ -11,7 +11,7 @@ import com.paracamplus.ilp1.compiler.CompilationException;
 import com.paracamplus.ilp1.compiler.normalizer.INormalizationEnvironment;
 import com.paracamplus.ilp2.ilp2tme4.ex3.interfaces.IASTunless;
 import com.paracamplus.ilp1.interfaces.IASTexpression;
-import com.paracamplus.ilp2.interfaces.IASTvisitor;
+import com.paracamplus.ilp2.ilp2tme4.ex3.interfaces.IASTvisitor;
 
 public class Normalizer 
 extends com.paracamplus.ilp2.compiler.normalizer.Normalizer 
