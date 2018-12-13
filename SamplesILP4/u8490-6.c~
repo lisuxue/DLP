@@ -82,7 +82,7 @@ ilptmp1245 = ilptmp1246;
   ILP_general_function ilptmp1249; 
   ILP_Object ilptmp1250; 
 ilptmp1250 = pc3; 
-ilptmp1249 = ILP_find_method(ilptmp1250, &ILP_object_print_method, 1);
+ILP_find_method_cached(ilptmp1250, &ILP_object_print_method, 1,ilptmp1249);
 ilptmp1248 = ilptmp1249(NULL, ilptmp1250);
 }
 ilptmp1248 = ILP_Integer2ILP(8490); 

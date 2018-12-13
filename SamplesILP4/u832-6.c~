@@ -73,7 +73,7 @@ ilptmp698->_content.asInstance.field[0] = ilptmp699;
 ilptmp698->_content.asInstance.field[1] = ilptmp700; 
 ilptmp697 = ilptmp698; 
 }
-ilptmp696 = ILP_find_method(ilptmp697, &ILP_object_print_method, 1);
+ILP_find_method_cached(ilptmp697, &ILP_object_print_method, 1,ilptmp696);
 return ilptmp696(NULL, ilptmp697);
 }
 

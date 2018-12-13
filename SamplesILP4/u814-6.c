@@ -132,11 +132,12 @@ ilp_program ()
 	  ILP_general_function ilptmp109;
 	  ILP_Object ilptmp110;
 	  ilptmp110 = point7;
-	  ilptmp109 =
-	    ILP_find_method (ilptmp110, &ILP_object_longueur_method, 1);
+	  ILP_find_method_cached (ilptmp110, &ILP_object_longueur_method, 1,
+				  ilptmp109);
 	  ilptmp108 = ilptmp109 (NULL, ilptmp110);
 	}
-	ilptmp105 = ILP_find_method (ilptmp106, &ILP_object_m1_method, 3);
+	ILP_find_method_cached (ilptmp106, &ILP_object_m1_method, 3,
+				ilptmp105);
 	return ilptmp105 (NULL, ilptmp106, ilptmp107, ilptmp108);
       }
 

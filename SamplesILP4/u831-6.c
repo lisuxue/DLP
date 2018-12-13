@@ -250,8 +250,8 @@ ilp_program ()
 	  ILP_general_function ilptmp689;
 	  ILP_Object ilptmp690;
 	  ilptmp690 = pc10;
-	  ilptmp689 =
-	    ILP_find_method (ilptmp690, &ILP_object_print_method, 1);
+	  ILP_find_method_cached (ilptmp690, &ILP_object_print_method, 1,
+				  ilptmp689);
 	  ilptmp683 = ilptmp689 (NULL, ilptmp690);
 	}
 

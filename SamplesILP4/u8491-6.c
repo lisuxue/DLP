@@ -135,8 +135,8 @@ ilp_program ()
 		ILP_general_function ilptmp1271;
 		ILP_Object ilptmp1272;
 		ilptmp1272 = pc5;
-		ilptmp1271 =
-		  ILP_find_method (ilptmp1272, &ILP_object_print_method, 1);
+		ILP_find_method_cached (ilptmp1272, &ILP_object_print_method,
+					1, ilptmp1271);
 		ilptmp1270 = ilptmp1271 (NULL, ilptmp1272);
 	      }
 	      ilptmp1270 = ILP_Integer2ILP (8491);

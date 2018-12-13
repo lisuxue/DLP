@@ -222,8 +222,8 @@ ilp_program ()
 	      ilptmp893 = pc9;
 	      ilptmp894 = ILP_Integer2ILP (4);
 	      ilptmp895 = ILP_Integer2ILP (2);
-	      ilptmp892 =
-		ILP_find_method (ilptmp893, &ILP_object_m1_method, 3);
+	      ILP_find_method_cached (ilptmp893, &ILP_object_m1_method, 3,
+				      ilptmp892);
 	      return ilptmp892 (NULL, ilptmp893, ilptmp894, ilptmp895);
 	    }
 	    ILP_current_exception = NULL;

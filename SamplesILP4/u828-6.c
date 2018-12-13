@@ -99,7 +99,7 @@ ilp_program ()
       ilptmp607->_content.asInstance.field[0] = ilptmp608;
       ilptmp606 = ilptmp607;
     }
-    ilptmp605 = ILP_find_method (ilptmp606, &ILP_object_m1_method, 1);
+    ILP_find_method_cached (ilptmp606, &ILP_object_m1_method, 1, ilptmp605);
     return ilptmp605 (NULL, ilptmp606);
   }
 

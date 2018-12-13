@@ -89,7 +89,7 @@ ilptmp61 = ilptmp62;
   ILP_general_function ilptmp65; 
   ILP_Object ilptmp66; 
 ilptmp66 = point3; 
-ilptmp65 = ILP_find_method(ilptmp66, &ILP_object_longueur_method, 1);
+ILP_find_method_cached(ilptmp66, &ILP_object_longueur_method, 1,ilptmp65);
 return ilptmp65(NULL, ilptmp66);
 }
 

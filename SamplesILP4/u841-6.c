@@ -170,8 +170,8 @@ ilp_program ()
 		ILP_Object ilptmp826;
 		ilptmp825 = pc7;
 		ilptmp826 = ILP_Integer2ILP (2);
-		ilptmp824 =
-		  ILP_find_method (ilptmp825, &ILP_object_m1_method, 2);
+		ILP_find_method_cached (ilptmp825, &ILP_object_m1_method, 2,
+					ilptmp824);
 		ilptmp823 = ilptmp824 (NULL, ilptmp825, ilptmp826);
 	      }
 	      return ILP_Plus (ilptmp822, ilptmp823);

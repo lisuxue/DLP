@@ -248,8 +248,8 @@ ilp_program ()
 		ILP_general_function ilptmp775;
 		ILP_Object ilptmp776;
 		ilptmp776 = pc7;
-		ilptmp775 =
-		  ILP_find_method (ilptmp776, &ILP_object_color2_method, 1);
+		ILP_find_method_cached (ilptmp776, &ILP_object_color2_method,
+					1, ilptmp775);
 		ilptmp774 = ilptmp775 (NULL, ilptmp776);
 	      }
 	      ILP_current_exception = NULL;

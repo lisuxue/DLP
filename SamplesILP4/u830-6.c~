@@ -176,7 +176,7 @@ ilptmp641 = ilptmp642;
   ILP_general_function ilptmp645; 
   ILP_Object ilptmp646; 
 ilptmp646 = point7; 
-ilptmp645 = ILP_find_method(ilptmp646, &ILP_object_print_method, 1);
+ILP_find_method_cached(ilptmp646, &ILP_object_print_method, 1,ilptmp645);
 ilptmp640 = ilptmp645(NULL, ilptmp646);
 }
 

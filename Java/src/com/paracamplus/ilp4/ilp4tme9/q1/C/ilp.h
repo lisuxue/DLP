@@ -435,6 +435,26 @@ extern ILP_Object ILP_domain_error (char *message, ILP_Object o);
 #define ILP_UnknownFieldError(f, o) \
   ILP_domain_error("Unfound field " f, o);
 
+/*************** Modification **********************/
+#define ILP_find_method_cached(o, m, a, z) \
+		do{\
+			static ILP_Object last_receiver;\
+			static ILP_Method last_method;\
+			static int last_argc;\
+			static ILP_general_function last_function;\
+			\
+			if(last_receiver == o && last_method == m && last_argc == a) {\
+					fprintf(stdout, "MEMO");\
+					z = last_function;\
+			} else {\
+				last_receiver = o; \
+				last_method = m; \
+				last_argc = a; \
+				last_function = ILP_find_method(o,m,a);\
+				z = last_function;\
+			}\
+		}while(0)
+
 #endif /* ILPOBJ_H */
 
 /* end of ilpObj.h */

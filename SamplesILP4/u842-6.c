@@ -198,8 +198,8 @@ ilp_program ()
 	      ILP_general_function ilptmp853;
 	      ILP_Object ilptmp854;
 	      ilptmp854 = pc5;
-	      ilptmp853 =
-		ILP_find_method (ilptmp854, &ILP_object_m1_method, 1);
+	      ILP_find_method_cached (ilptmp854, &ILP_object_m1_method, 1,
+				      ilptmp853);
 	      return ilptmp853 (NULL, ilptmp854);
 	    }
 	    ILP_current_exception = NULL;

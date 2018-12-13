@@ -88,7 +88,8 @@ ilp__m2_3 (ILP_Closure ilp_useless, ILP_Object self1, ILP_Object u2)
 	ilptmp231 = self1;
 	ilptmp232 = u2;
 	ilptmp233 = u2;
-	ilptmp230 = ILP_find_method (ilptmp231, &ILP_object_m1_method, 3);
+	ILP_find_method_cached (ilptmp231, &ILP_object_m1_method, 3,
+				ilptmp230);
 	ilptmp228 = ilptmp230 (NULL, ilptmp231, ilptmp232, ilptmp233);
       }
       ilptmp229 = ILP_Integer2ILP (1);
@@ -179,7 +180,8 @@ ilp_program ()
 	ILP_Object ilptmp248;
 	ilptmp247 = point8;
 	ilptmp248 = ILP_Integer2ILP (2);
-	ilptmp246 = ILP_find_method (ilptmp247, &ILP_object_m2_method, 2);
+	ILP_find_method_cached (ilptmp247, &ILP_object_m2_method, 2,
+				ilptmp246);
 	return ilptmp246 (NULL, ilptmp247, ilptmp248);
       }
 

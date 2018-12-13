@@ -26,18 +26,18 @@ import com.paracamplus.ilp1.parser.ParseException;
 import com.paracamplus.ilp1.parser.xml.IXMLParser;
 import com.paracamplus.ilp3.compiler.GlobalVariableStuff;
 import com.paracamplus.ilp4.ast.ASTfactory;
-import com.paracamplus.ilp4.compiler.Compiler;
+import com.paracamplus.ilp4.ilp4tme9.q1.compiler.Compiler;
 import com.paracamplus.ilp4.compiler.test.CompilerRunner;
 import com.paracamplus.ilp4.interfaces.IASTfactory;
 import com.paracamplus.ilp4.parser.ilpml.ILPMLParser;
 import com.paracamplus.ilp4.parser.xml.XMLParser;
 
 @RunWith(Parameterized.class)
-public class CompilerTest extends com.paracamplus.ilp3.compiler.test.CompilerTest {
+public class CompilerTest extends com.paracamplus.ilp4.compiler.test.CompilerTest {
     
-    protected static String[] samplesDirName = { "SamplesTME9" };//, "SamplesILP3", "SamplesILP2", "SamplesILP1" };
+    protected static String[] samplesDirName = { "SamplesILP4" };//, "SamplesILP3", "SamplesILP2", "SamplesILP1" };
     protected static String pattern = "ur?[0-78]\\d*-[123456](gfv)?";
-    protected static String scriptCommand = "C/compileThenRun.sh +gc";
+    protected static String scriptCommand = " Java/src/com/paracamplus/ilp4/ilp4tme9/q1/C/compileThenRun.sh +gc";
     protected static String XMLgrammarFile = "XMLGrammars/grammar4.rng";
     
     public CompilerTest(final File file) {

@@ -107,79 +107,68 @@ ilp_program ()
 {
   {
     ILP_Object ilptmp3;
+    ILP_Object ilptmp4;
     {
-      ILP_Object ilptmp4;
       ILP_Object ilptmp5;
       ILP_Object ilptmp6;
-      ilptmp5 = ILP_Integer2ILP (11);
-      ilptmp6 = ILP_Integer2ILP (22);
-      ilptmp4 = ILP_MakeInstance (Point);
-      ilptmp4->_content.asInstance.field[0] = ilptmp5;
-      ilptmp4->_content.asInstance.field[1] = ilptmp6;
-      ilptmp3 = ilptmp4;
+      ILP_Object ilptmp7;
+      ilptmp6 = ILP_Integer2ILP (11);
+      ilptmp7 = ILP_Integer2ILP (22);
+      ilptmp5 = ILP_MakeInstance (Point);
+      ilptmp5->_content.asInstance.field[0] = ilptmp6;
+      ilptmp5->_content.asInstance.field[1] = ilptmp7;
+      ilptmp3 = ilptmp5;
     }
+    ilptmp4 = ILP_Integer2ILP (0);
 
     {
       ILP_Object point7 = ilptmp3;
-      {
-	ILP_Object ilptmp7;
+      ILP_Object i8 = ilptmp4;
+      while (1)
 	{
-	  ILP_general_function ilptmp8;
-	  ILP_Object ilptmp9;
-	  ilptmp9 = point7;
-	  ilptmp8 = ILP_find_method (ilptmp9, &ILP_object_longueur_method, 1);
-	  ilptmp7 = ilptmp8 (NULL, ilptmp9);
+	  ILP_Object ilptmp8;
+	  {
+	    ILP_Object ilptmp9;
+	    ILP_Object ilptmp10;
+	    ilptmp9 = i8;
+	    ilptmp10 = ILP_Integer2ILP (3);
+	    ilptmp8 = ILP_LessThan (ilptmp9, ilptmp10);
+	  }
+	  if (ILP_isEquivalentToTrue (ilptmp8))
+	    {
+	      {
+		ILP_Object ilptmp11;
+		{
+		  ILP_Object ilptmp12;
+		  {
+		    ILP_Object ilptmp13;
+		    ILP_Object ilptmp14;
+		    ilptmp13 = i8;
+		    ilptmp14 = ILP_Integer2ILP (1);
+		    ilptmp12 = ILP_Plus (ilptmp13, ilptmp14);
+		  }
+		  ilptmp11 = (i8 = ilptmp12);
+		}
+		{
+		  ILP_general_function ilptmp15;
+		  ILP_Object ilptmp16;
+		  ilptmp16 = point7;
+		  ILP_find_method_cached (ilptmp16,
+					  &ILP_object_longueur_method, 1,
+					  ilptmp15);
+		  ilptmp11 = ilptmp15 (NULL, ilptmp16);
+		}
+		(void) ilptmp11;
+	      }
+
+	    }
+	  else
+	    {
+	      break;
+
+	    }
 	}
-	{
-	  ILP_general_function ilptmp10;
-	  ILP_Object ilptmp11;
-	  ilptmp11 = point7;
-	  ilptmp10 =
-	    ILP_find_method (ilptmp11, &ILP_object_longueur_method, 1);
-	  ilptmp7 = ilptmp10 (NULL, ilptmp11);
-	}
-	{
-	  ILP_general_function ilptmp12;
-	  ILP_Object ilptmp13;
-	  ilptmp13 = point7;
-	  ilptmp12 =
-	    ILP_find_method (ilptmp13, &ILP_object_longueur_method, 1);
-	  ilptmp7 = ilptmp12 (NULL, ilptmp13);
-	}
-	{
-	  ILP_general_function ilptmp14;
-	  ILP_Object ilptmp15;
-	  ilptmp15 = point7;
-	  ilptmp14 =
-	    ILP_find_method (ilptmp15, &ILP_object_longueur_method, 1);
-	  ilptmp7 = ilptmp14 (NULL, ilptmp15);
-	}
-	{
-	  ILP_general_function ilptmp16;
-	  ILP_Object ilptmp17;
-	  ilptmp17 = point7;
-	  ilptmp16 =
-	    ILP_find_method (ilptmp17, &ILP_object_longueur_method, 1);
-	  ilptmp7 = ilptmp16 (NULL, ilptmp17);
-	}
-	{
-	  ILP_general_function ilptmp18;
-	  ILP_Object ilptmp19;
-	  ilptmp19 = point7;
-	  ilptmp18 =
-	    ILP_find_method (ilptmp19, &ILP_object_longueur_method, 1);
-	  ilptmp7 = ilptmp18 (NULL, ilptmp19);
-	}
-	{
-	  ILP_general_function ilptmp20;
-	  ILP_Object ilptmp21;
-	  ilptmp21 = point7;
-	  ilptmp20 =
-	    ILP_find_method (ilptmp21, &ILP_object_longueur_method, 1);
-	  ilptmp7 = ilptmp20 (NULL, ilptmp21);
-	}
-	return ilptmp7;
-      }
+      return ILP_FALSE;
 
     }
   }

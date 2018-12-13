@@ -375,8 +375,8 @@ ilp_program ()
 		  ilptmp1228 = pc421;
 		  ilptmp1229 = ILP_Integer2ILP (3);
 		  ilptmp1230 = ILP_Integer2ILP (4);
-		  ilptmp1227 =
-		    ILP_find_method (ilptmp1228, &ILP_object_m1_method, 3);
+		  ILP_find_method_cached (ilptmp1228, &ILP_object_m1_method,
+					  3, ilptmp1227);
 		  ilptmp1225 =
 		    ilptmp1227 (NULL, ilptmp1228, ilptmp1229, ilptmp1230);
 		}
@@ -388,8 +388,8 @@ ilp_program ()
 		  ilptmp1232 = pc222;
 		  ilptmp1233 = ILP_Integer2ILP (2);
 		  ilptmp1234 = ILP_Integer2ILP (3);
-		  ilptmp1231 =
-		    ILP_find_method (ilptmp1232, &ILP_object_m1_method, 3);
+		  ILP_find_method_cached (ilptmp1232, &ILP_object_m1_method,
+					  3, ilptmp1231);
 		  ilptmp1226 =
 		    ilptmp1231 (NULL, ilptmp1232, ilptmp1233, ilptmp1234);
 		}

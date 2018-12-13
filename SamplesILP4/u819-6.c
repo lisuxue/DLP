@@ -238,9 +238,9 @@ ilp_program ()
 		ILP_Object ilptmp288;
 		ilptmp287 = point10;
 		ilptmp288 = ILP_Integer2ILP (23);
-		ilptmp286 =
-		  ILP_find_method (ilptmp287, &ILP_object_nexistePas_method,
-				   2);
+		ILP_find_method_cached (ilptmp287,
+					&ILP_object_nexistePas_method, 2,
+					ilptmp286);
 		ilptmp285 = ilptmp286 (NULL, ilptmp287, ilptmp288);
 	      }
 	      ILP_current_exception = NULL;

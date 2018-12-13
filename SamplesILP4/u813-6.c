@@ -105,7 +105,7 @@ ilp_program ()
 	ilptmp84 = point5;
 	ilptmp85 = ILP_Integer2ILP (800);
 	ilptmp86 = ILP_Integer2ILP (13);
-	ilptmp83 = ILP_find_method (ilptmp84, &ILP_object_m1_method, 3);
+	ILP_find_method_cached (ilptmp84, &ILP_object_m1_method, 3, ilptmp83);
 	return ilptmp83 (NULL, ilptmp84, ilptmp85, ilptmp86);
       }
 

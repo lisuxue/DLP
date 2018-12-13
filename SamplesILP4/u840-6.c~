@@ -142,7 +142,7 @@ ilptmp791 = ilptmp792;
   ILP_general_function ilptmp795; 
   ILP_Object ilptmp796; 
 ilptmp796 = pc5; 
-ilptmp795 = ILP_find_method(ilptmp796, &ILP_object_m1_method, 1);
+ILP_find_method_cached(ilptmp796, &ILP_object_m1_method, 1,ilptmp795);
 return ilptmp795(NULL, ilptmp796);
 }
       ILP_current_exception = NULL; 

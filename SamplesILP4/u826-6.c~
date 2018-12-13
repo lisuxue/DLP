@@ -214,7 +214,7 @@ ilptmp548 = ilptmp549;
   ILP_general_function ilptmp553; 
   ILP_Object ilptmp554; 
 ilptmp554 = pc9; 
-ilptmp553 = ILP_find_method(ilptmp554, &ILP_object_longueur_method, 1);
+ILP_find_method_cached(ilptmp554, &ILP_object_longueur_method, 1,ilptmp553);
 return ilptmp553(NULL, ilptmp554);
 }
 

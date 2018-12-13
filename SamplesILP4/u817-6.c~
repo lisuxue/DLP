@@ -181,10 +181,10 @@ ilptmp203 = ILP_Integer2ILP(2);
   ILP_general_function ilptmp205; 
   ILP_Object ilptmp206; 
 ilptmp206 = point7; 
-ilptmp205 = ILP_find_method(ilptmp206, &ILP_object_longueur_method, 1);
+ILP_find_method_cached(ilptmp206, &ILP_object_longueur_method, 1,ilptmp205);
 ilptmp204 = ilptmp205(NULL, ilptmp206);
 }
-ilptmp201 = ILP_find_method(ilptmp202, &ILP_object_m1_method, 3);
+ILP_find_method_cached(ilptmp202, &ILP_object_m1_method, 3,ilptmp201);
 return ilptmp201(NULL, ilptmp202, ilptmp203, ilptmp204);
 }
 

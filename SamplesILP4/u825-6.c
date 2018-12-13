@@ -244,7 +244,8 @@ ilp_program ()
 	ilptmp514 = pc9;
 	ilptmp515 = ILP_Integer2ILP (1);
 	ilptmp516 = ILP_Integer2ILP (1);
-	ilptmp513 = ILP_find_method (ilptmp514, &ILP_object_m1_method, 3);
+	ILP_find_method_cached (ilptmp514, &ILP_object_m1_method, 3,
+				ilptmp513);
 	return ilptmp513 (NULL, ilptmp514, ilptmp515, ilptmp516);
       }
 

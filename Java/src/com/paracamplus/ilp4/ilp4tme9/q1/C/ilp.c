@@ -366,21 +366,7 @@ ILP_find_method (ILP_Object receiver,
                  ILP_Method method,
                  int argc)
 {
-
 	/************************Modifications***********************************/
-	if(
-			last_receiver == receiver &&
-			last_method == method &&
-			argc == last_arity
-	){
-		fprintf(stdout, "MEMOI");
-		return last_function;
-	}
-
-	last_receiver = receiver;
-	last_method = method;
-	last_arity = argc;
-
      ILP_Class oclass = receiver->_class;
      if ( ! ILP_is_subclass_of(oclass, 
                                method->_content.asMethod.class_defining) ) {
@@ -420,9 +406,8 @@ ILP_find_method (ILP_Object receiver,
           return NULL;
      };
      {
-          int index = method->_content.asMethod.index;
-          last_function = oclass->_content.asClass.method[index];
-          return oclass->_content.asClass.method[index];
+    	  int index = method->_content.asMethod.index;
+          return oclass->_content.asClass.method[index];;
      }
 }
 
