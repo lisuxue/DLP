@@ -70,15 +70,15 @@ ilp__m1_2 (ILP_Closure ilp_useless, ILP_Object self1)
 
   {
     {
-      ILP_Object ilptmp604;
-      ilptmp604 = self1;
-      if (ILP_IsA (ilptmp604, SousPoint))
+      ILP_Object ilptmp300;
+      ilptmp300 = self1;
+      if (ILP_IsA (ilptmp300, SousPoint))
 	{
-	  return ilptmp604->_content.asInstance.field[0];
+	  return ilptmp300->_content.asInstance.field[0];
 	}
       else
 	{
-	  return ILP_UnknownFieldError ("sous", ilptmp604);
+	  return ILP_UnknownFieldError ("sous", ilptmp300);
 	}
     }
   }
@@ -89,18 +89,18 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_general_function ilptmp605;
-    ILP_Object ilptmp606;
+    ILP_general_function ilptmp301;
+    ILP_Object ilptmp302;
     {
-      ILP_Object ilptmp607;
-      ILP_Object ilptmp608;
-      ilptmp608 = ILP_Integer2ILP (828);
-      ilptmp607 = ILP_MakeInstance (SousPoint);
-      ilptmp607->_content.asInstance.field[0] = ilptmp608;
-      ilptmp606 = ilptmp607;
+      ILP_Object ilptmp303;
+      ILP_Object ilptmp304;
+      ilptmp304 = ILP_Integer2ILP (828);
+      ilptmp303 = ILP_MakeInstance (SousPoint);
+      ilptmp303->_content.asInstance.field[0] = ilptmp304;
+      ilptmp302 = ilptmp303;
     }
-    ILP_find_method_cached (ilptmp606, &ILP_object_m1_method, 1, ilptmp605);
-    return ilptmp605 (NULL, ilptmp606);
+    ilptmp301 = ILP_find_method (ilptmp302, &ILP_object_m1_method, 1);
+    return ilptmp301 (NULL, ilptmp302);
   }
 
 }

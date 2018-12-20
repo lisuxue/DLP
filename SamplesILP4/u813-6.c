@@ -68,11 +68,11 @@ ilp__m1_4 (ILP_Closure ilp_useless,
 
   {
     {
-      ILP_Object ilptmp77;
-      ILP_Object ilptmp78;
-      ilptmp77 = z2;
-      ilptmp78 = t3;
-      return ILP_Plus (ilptmp77, ilptmp78);
+      ILP_Object ilptmp34;
+      ILP_Object ilptmp35;
+      ilptmp34 = z2;
+      ilptmp35 = t3;
+      return ILP_Plus (ilptmp34, ilptmp35);
     }
   }
 }
@@ -82,31 +82,31 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp79;
+    ILP_Object ilptmp36;
     {
-      ILP_Object ilptmp80;
-      ILP_Object ilptmp81;
-      ILP_Object ilptmp82;
-      ilptmp81 = ILP_Integer2ILP (11);
-      ilptmp82 = ILP_Integer2ILP (22);
-      ilptmp80 = ILP_MakeInstance (Point);
-      ilptmp80->_content.asInstance.field[0] = ilptmp81;
-      ilptmp80->_content.asInstance.field[1] = ilptmp82;
-      ilptmp79 = ilptmp80;
+      ILP_Object ilptmp37;
+      ILP_Object ilptmp38;
+      ILP_Object ilptmp39;
+      ilptmp38 = ILP_Integer2ILP (11);
+      ilptmp39 = ILP_Integer2ILP (22);
+      ilptmp37 = ILP_MakeInstance (Point);
+      ilptmp37->_content.asInstance.field[0] = ilptmp38;
+      ilptmp37->_content.asInstance.field[1] = ilptmp39;
+      ilptmp36 = ilptmp37;
     }
 
     {
-      ILP_Object point5 = ilptmp79;
+      ILP_Object point5 = ilptmp36;
       {
-	ILP_general_function ilptmp83;
-	ILP_Object ilptmp84;
-	ILP_Object ilptmp85;
-	ILP_Object ilptmp86;
-	ilptmp84 = point5;
-	ilptmp85 = ILP_Integer2ILP (800);
-	ilptmp86 = ILP_Integer2ILP (13);
-	ILP_find_method_cached (ilptmp84, &ILP_object_m1_method, 3, ilptmp83);
-	return ilptmp83 (NULL, ilptmp84, ilptmp85, ilptmp86);
+	ILP_general_function ilptmp40;
+	ILP_Object ilptmp41;
+	ILP_Object ilptmp42;
+	ILP_Object ilptmp43;
+	ilptmp41 = point5;
+	ilptmp42 = ILP_Integer2ILP (800);
+	ilptmp43 = ILP_Integer2ILP (13);
+	ilptmp40 = ILP_find_method (ilptmp41, &ILP_object_m1_method, 3);
+	return ilptmp40 (NULL, ilptmp41, ilptmp42, ilptmp43);
       }
 
     }

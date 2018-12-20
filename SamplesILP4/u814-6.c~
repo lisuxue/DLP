@@ -92,11 +92,11 @@ ILP_Object ilp_CurrentArguments[3];
 
 {
 { 
-  ILP_Object ilptmp99; 
-  ILP_Object ilptmp100; 
-ilptmp99 = z4; 
-ilptmp100 = t5; 
-return ILP_Plus(ilptmp99, ilptmp100);
+  ILP_Object ilptmp44; 
+  ILP_Object ilptmp45; 
+ilptmp44 = z4; 
+ilptmp45 = t5; 
+return ILP_Plus(ilptmp44, ilptmp45);
 } 
 }
 }
@@ -105,37 +105,37 @@ return ILP_Plus(ilptmp99, ilptmp100);
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp101; 
+  ILP_Object ilptmp46; 
 { 
-  ILP_Object ilptmp102; 
-  ILP_Object ilptmp103; 
-  ILP_Object ilptmp104; 
-ilptmp103 = ILP_Integer2ILP(11); 
-ilptmp104 = ILP_Integer2ILP(22); 
-ilptmp102 = ILP_MakeInstance(Point); 
-ilptmp102->_content.asInstance.field[0] = ilptmp103; 
-ilptmp102->_content.asInstance.field[1] = ilptmp104; 
-ilptmp101 = ilptmp102; 
+  ILP_Object ilptmp47; 
+  ILP_Object ilptmp48; 
+  ILP_Object ilptmp49; 
+ilptmp48 = ILP_Integer2ILP(11); 
+ilptmp49 = ILP_Integer2ILP(22); 
+ilptmp47 = ILP_MakeInstance(Point); 
+ilptmp47->_content.asInstance.field[0] = ilptmp48; 
+ilptmp47->_content.asInstance.field[1] = ilptmp49; 
+ilptmp46 = ilptmp47; 
 }
 
   {
-    ILP_Object point7 = ilptmp101;
+    ILP_Object point7 = ilptmp46;
 { 
-  ILP_general_function ilptmp105; 
-  ILP_Object ilptmp106; 
-  ILP_Object ilptmp107; 
-  ILP_Object ilptmp108; 
-ilptmp106 = point7; 
-ilptmp107 = ILP_Integer2ILP(2); 
+  ILP_general_function ilptmp50; 
+  ILP_Object ilptmp51; 
+  ILP_Object ilptmp52; 
+  ILP_Object ilptmp53; 
+ilptmp51 = point7; 
+ilptmp52 = ILP_Integer2ILP(2); 
 { 
-  ILP_general_function ilptmp109; 
-  ILP_Object ilptmp110; 
-ilptmp110 = point7; 
-ILP_find_method_cached(ilptmp110, &ILP_object_longueur_method, 1,ilptmp109);
-ilptmp108 = ilptmp109(NULL, ilptmp110);
+  ILP_general_function ilptmp54; 
+  ILP_Object ilptmp55; 
+ilptmp55 = point7; 
+ilptmp54 = ILP_find_method(ilptmp55, &ILP_object_longueur_method, 1);
+ilptmp53 = ilptmp54(NULL, ilptmp55);
 }
-ILP_find_method_cached(ilptmp106, &ILP_object_m1_method, 3,ilptmp105);
-return ilptmp105(NULL, ilptmp106, ilptmp107, ilptmp108);
+ilptmp50 = ILP_find_method(ilptmp51, &ILP_object_m1_method, 3);
+return ilptmp50(NULL, ilptmp51, ilptmp52, ilptmp53);
 }
 
   }

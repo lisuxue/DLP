@@ -47,28 +47,28 @@ ILPm_classOf,
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp18; 
+  ILP_Object ilptmp7; 
 { 
-  ILP_Object ilptmp19; 
-  ILP_Object ilptmp20; 
-  ILP_Object ilptmp21; 
-ilptmp20 = ILP_Integer2ILP(809); 
-ilptmp21 = ILP_Integer2ILP(22); 
-ilptmp19 = ILP_MakeInstance(Point); 
-ilptmp19->_content.asInstance.field[0] = ilptmp20; 
-ilptmp19->_content.asInstance.field[1] = ilptmp21; 
-ilptmp18 = ilptmp19; 
+  ILP_Object ilptmp8; 
+  ILP_Object ilptmp9; 
+  ILP_Object ilptmp10; 
+ilptmp9 = ILP_Integer2ILP(809); 
+ilptmp10 = ILP_Integer2ILP(22); 
+ilptmp8 = ILP_MakeInstance(Point); 
+ilptmp8->_content.asInstance.field[0] = ilptmp9; 
+ilptmp8->_content.asInstance.field[1] = ilptmp10; 
+ilptmp7 = ilptmp8; 
 }
 
   {
-    ILP_Object point1 = ilptmp18;
+    ILP_Object point1 = ilptmp7;
 { 
-  ILP_Object ilptmp22; 
-ilptmp22 = point1; 
-if ( ILP_IsA(ilptmp22, Point ) ) {
-return ilptmp22->_content.asInstance.field[0];
+  ILP_Object ilptmp11; 
+ilptmp11 = point1; 
+if ( ILP_IsA(ilptmp11, Point ) ) {
+return ilptmp11->_content.asInstance.field[0];
 } else {
-return  ILP_UnknownFieldError("x", ilptmp22);
+return  ILP_UnknownFieldError("x", ilptmp11);
 }
 }
 

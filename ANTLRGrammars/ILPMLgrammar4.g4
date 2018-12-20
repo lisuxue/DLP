@@ -90,6 +90,6 @@ expr returns [com.paracamplus.ilp1.interfaces.IASTexpression node]
     | 'lambda' '(' vars+=IDENT? (',' vars+=IDENT)* ')'
       body=expr # Lambda
     | defs+=localFunDef ('and' defs+=localFunDef)* 'in' body=expr 
-    # Codefinitions       
+    # Codefinitions
     
     ;

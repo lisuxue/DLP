@@ -30,14 +30,14 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp3;
+    ILP_Object ilptmp1;
     {
-      ILP_Object ilptmp4;
-      ilptmp4 = ILP_MakeInstance (Point);
-      ilptmp3 = ilptmp4;
+      ILP_Object ilptmp2;
+      ilptmp2 = ILP_MakeInstance (Point);
+      ilptmp1 = ilptmp2;
     }
-    ilptmp3 = ILP_Integer2ILP (805);
-    return ilptmp3;
+    ilptmp1 = ILP_Integer2ILP (805);
+    return ilptmp1;
   }
 
 }

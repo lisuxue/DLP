@@ -54,15 +54,15 @@ ilp__print_2 (ILP_Closure ilp_useless, ILP_Object self1)
 
   {
     {
-      ILP_Object ilptmp982;
-      ilptmp982 = self1;
-      if (ILP_IsA (ilptmp982, Point))
+      ILP_Object ilptmp488;
+      ilptmp488 = self1;
+      if (ILP_IsA (ilptmp488, Point))
 	{
-	  return ilptmp982->_content.asInstance.field[0];
+	  return ilptmp488->_content.asInstance.field[0];
 	}
       else
 	{
-	  return ILP_UnknownFieldError ("x_3ax", ilptmp982);
+	  return ILP_UnknownFieldError ("x_3ax", ilptmp488);
 	}
     }
   }
@@ -73,22 +73,21 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_general_function ilptmp983;
-    ILP_Object ilptmp984;
+    ILP_general_function ilptmp489;
+    ILP_Object ilptmp490;
     {
-      ILP_Object ilptmp985;
-      ILP_Object ilptmp986;
-      ILP_Object ilptmp987;
-      ilptmp986 = ILP_Integer2ILP (8450);
-      ilptmp987 = ILP_Integer2ILP (22);
-      ilptmp985 = ILP_MakeInstance (Point);
-      ilptmp985->_content.asInstance.field[0] = ilptmp986;
-      ilptmp985->_content.asInstance.field[1] = ilptmp987;
-      ilptmp984 = ilptmp985;
+      ILP_Object ilptmp491;
+      ILP_Object ilptmp492;
+      ILP_Object ilptmp493;
+      ilptmp492 = ILP_Integer2ILP (8450);
+      ilptmp493 = ILP_Integer2ILP (22);
+      ilptmp491 = ILP_MakeInstance (Point);
+      ilptmp491->_content.asInstance.field[0] = ilptmp492;
+      ilptmp491->_content.asInstance.field[1] = ilptmp493;
+      ilptmp490 = ilptmp491;
     }
-    ILP_find_method_cached (ilptmp984, &ILP_object_print_method, 1,
-			    ilptmp983);
-    return ilptmp983 (NULL, ilptmp984);
+    ilptmp489 = ILP_find_method (ilptmp490, &ILP_object_print_method, 1);
+    return ilptmp489 (NULL, ilptmp490);
   }
 
 }

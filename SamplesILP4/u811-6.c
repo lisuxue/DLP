@@ -48,50 +48,50 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp47;
+    ILP_Object ilptmp20;
     {
-      ILP_Object ilptmp48;
-      ILP_Object ilptmp49;
-      ILP_Object ilptmp50;
-      ilptmp49 = ILP_Integer2ILP (11);
-      ilptmp50 = ILP_Integer2ILP (22);
-      ilptmp48 = ILP_MakeInstance (Point);
-      ilptmp48->_content.asInstance.field[0] = ilptmp49;
-      ilptmp48->_content.asInstance.field[1] = ilptmp50;
-      ilptmp47 = ilptmp48;
+      ILP_Object ilptmp21;
+      ILP_Object ilptmp22;
+      ILP_Object ilptmp23;
+      ilptmp22 = ILP_Integer2ILP (11);
+      ilptmp23 = ILP_Integer2ILP (22);
+      ilptmp21 = ILP_MakeInstance (Point);
+      ilptmp21->_content.asInstance.field[0] = ilptmp22;
+      ilptmp21->_content.asInstance.field[1] = ilptmp23;
+      ilptmp20 = ilptmp21;
     }
 
     {
-      ILP_Object point1 = ilptmp47;
+      ILP_Object point1 = ilptmp20;
       {
-	ILP_Object ilptmp51;
+	ILP_Object ilptmp24;
 	{
-	  ILP_Object ilptmp52;
-	  ILP_Object ilptmp53;
-	  ilptmp52 = point1;
-	  ilptmp53 = ILP_Integer2ILP (811);
-	  if (ILP_IsA (ilptmp52, Point))
+	  ILP_Object ilptmp25;
+	  ILP_Object ilptmp26;
+	  ilptmp25 = point1;
+	  ilptmp26 = ILP_Integer2ILP (811);
+	  if (ILP_IsA (ilptmp25, Point))
 	    {
-	      ilptmp51 = ilptmp52->_content.asInstance.field[1] = ilptmp53;
+	      ilptmp24 = ilptmp25->_content.asInstance.field[1] = ilptmp26;
 	    }
 	  else
 	    {
-	      ilptmp51 = ILP_UnknownFieldError ("y", ilptmp52);
+	      ilptmp24 = ILP_UnknownFieldError ("y", ilptmp25);
 	    }
 	}
 	{
-	  ILP_Object ilptmp54;
-	  ilptmp54 = point1;
-	  if (ILP_IsA (ilptmp54, Point))
+	  ILP_Object ilptmp27;
+	  ilptmp27 = point1;
+	  if (ILP_IsA (ilptmp27, Point))
 	    {
-	      ilptmp51 = ilptmp54->_content.asInstance.field[1];
+	      ilptmp24 = ilptmp27->_content.asInstance.field[1];
 	    }
 	  else
 	    {
-	      ilptmp51 = ILP_UnknownFieldError ("y", ilptmp54);
+	      ilptmp24 = ILP_UnknownFieldError ("y", ilptmp27);
 	    }
 	}
-	return ilptmp51;
+	return ilptmp24;
       }
 
     }

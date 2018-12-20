@@ -95,24 +95,24 @@ return ILP_Integer2ILP(833);
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_general_function ilptmp707; 
-  ILP_Object ilptmp708; 
+  ILP_general_function ilptmp351; 
+  ILP_Object ilptmp352; 
 { 
-  ILP_Object ilptmp709; 
-  ILP_Object ilptmp710; 
-  ILP_Object ilptmp711; 
-  ILP_Object ilptmp712; 
-ilptmp710 = ILP_Integer2ILP(11); 
-ilptmp711 = ILP_Integer2ILP(22); 
-ilptmp712 =  ILP_String2ILP("red"); 
-ilptmp709 = ILP_MakeInstance(PointColore); 
-ilptmp709->_content.asInstance.field[0] = ilptmp710; 
-ilptmp709->_content.asInstance.field[1] = ilptmp711; 
-ilptmp709->_content.asInstance.field[2] = ilptmp712; 
-ilptmp708 = ilptmp709; 
+  ILP_Object ilptmp353; 
+  ILP_Object ilptmp354; 
+  ILP_Object ilptmp355; 
+  ILP_Object ilptmp356; 
+ilptmp354 = ILP_Integer2ILP(11); 
+ilptmp355 = ILP_Integer2ILP(22); 
+ilptmp356 =  ILP_String2ILP("red"); 
+ilptmp353 = ILP_MakeInstance(PointColore); 
+ilptmp353->_content.asInstance.field[0] = ilptmp354; 
+ilptmp353->_content.asInstance.field[1] = ilptmp355; 
+ilptmp353->_content.asInstance.field[2] = ilptmp356; 
+ilptmp352 = ilptmp353; 
 }
-ILP_find_method_cached(ilptmp708, &ILP_object_print_method, 1,ilptmp707);
-return ilptmp707(NULL, ilptmp708);
+ilptmp351 = ILP_find_method(ilptmp352, &ILP_object_print_method, 1);
+return ilptmp351(NULL, ilptmp352);
 }
 
 } 

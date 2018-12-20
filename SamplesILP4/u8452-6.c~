@@ -70,21 +70,21 @@ return ILP_Integer2ILP(8452);
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_general_function ilptmp1003; 
-  ILP_Object ilptmp1004; 
+  ILP_general_function ilptmp499; 
+  ILP_Object ilptmp500; 
 { 
-  ILP_Object ilptmp1005; 
-  ILP_Object ilptmp1006; 
-  ILP_Object ilptmp1007; 
-ilptmp1006 = ILP_Integer2ILP(11); 
-ilptmp1007 = ILP_Integer2ILP(22); 
-ilptmp1005 = ILP_MakeInstance(Point); 
-ilptmp1005->_content.asInstance.field[0] = ilptmp1006; 
-ilptmp1005->_content.asInstance.field[1] = ilptmp1007; 
-ilptmp1004 = ilptmp1005; 
+  ILP_Object ilptmp501; 
+  ILP_Object ilptmp502; 
+  ILP_Object ilptmp503; 
+ilptmp502 = ILP_Integer2ILP(11); 
+ilptmp503 = ILP_Integer2ILP(22); 
+ilptmp501 = ILP_MakeInstance(Point); 
+ilptmp501->_content.asInstance.field[0] = ilptmp502; 
+ilptmp501->_content.asInstance.field[1] = ilptmp503; 
+ilptmp500 = ilptmp501; 
 }
-ILP_find_method_cached(ilptmp1004, &ILP_object_pr_3aint_method, 1,ilptmp1003);
-return ilptmp1003(NULL, ilptmp1004);
+ilptmp499 = ILP_find_method(ilptmp500, &ILP_object_pr_3aint_method, 1);
+return ilptmp499(NULL, ilptmp500);
 }
 
 } 

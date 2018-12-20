@@ -45,14 +45,14 @@ ilp__print_2 (ILP_Closure ilp_useless, ILP_Object self1)
 
   {
     {
-      ILP_Object ilptmp1243;
+      ILP_Object ilptmp614;
       {
-	ILP_Object ilptmp1244;
-	ilptmp1244 = ILP_String2ILP ("print@Point");
-	ilptmp1243 = ILP_print (ilptmp1244);
+	ILP_Object ilptmp615;
+	ilptmp615 = ILP_String2ILP ("print@Point");
+	ilptmp614 = ILP_print (ilptmp615);
       }
-      ilptmp1243 = ILP_FindAndCallSuperMethod ();
-      return ilptmp1243;
+      ilptmp614 = ILP_FindAndCallSuperMethod ();
+      return ilptmp614;
     }
   }
 }
@@ -62,18 +62,18 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp1245;
+    ILP_Object ilptmp616;
     {
-      ILP_Object ilptmp1246;
-      ILP_Object ilptmp1247;
-      ilptmp1247 = ILP_Integer2ILP (8490);
-      ilptmp1246 = ILP_MakeInstance (Point);
-      ilptmp1246->_content.asInstance.field[0] = ilptmp1247;
-      ilptmp1245 = ilptmp1246;
+      ILP_Object ilptmp617;
+      ILP_Object ilptmp618;
+      ilptmp618 = ILP_Integer2ILP (8490);
+      ilptmp617 = ILP_MakeInstance (Point);
+      ilptmp617->_content.asInstance.field[0] = ilptmp618;
+      ilptmp616 = ilptmp617;
     }
 
     {
-      ILP_Object pc3 = ilptmp1245;
+      ILP_Object pc3 = ilptmp616;
       {
 	struct ILP_catcher *current_catcher = ILP_current_catcher;
 	struct ILP_catcher new_catcher;
@@ -81,17 +81,17 @@ ilp_program ()
 	  {
 	    ILP_establish_catcher (&new_catcher);
 	    {
-	      ILP_Object ilptmp1248;
+	      ILP_Object ilptmp619;
 	      {
-		ILP_general_function ilptmp1249;
-		ILP_Object ilptmp1250;
-		ilptmp1250 = pc3;
-		ILP_find_method_cached (ilptmp1250, &ILP_object_print_method,
-					1, ilptmp1249);
-		ilptmp1248 = ilptmp1249 (NULL, ilptmp1250);
+		ILP_general_function ilptmp620;
+		ILP_Object ilptmp621;
+		ilptmp621 = pc3;
+		ilptmp620 =
+		  ILP_find_method (ilptmp621, &ILP_object_print_method, 1);
+		ilptmp619 = ilptmp620 (NULL, ilptmp621);
 	      }
-	      ilptmp1248 = ILP_Integer2ILP (8490);
-	      return ilptmp1248;
+	      ilptmp619 = ILP_Integer2ILP (8490);
+	      return ilptmp619;
 	    }
 	    ILP_current_exception = NULL;
 	  };

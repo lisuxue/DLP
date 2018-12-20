@@ -135,15 +135,15 @@ ilp__x_2 (ILP_Closure ilp_useless, ILP_Object self1)
 
   {
     {
-      ILP_Object ilptmp761;
-      ilptmp761 = self1;
-      if (ILP_IsA (ilptmp761, Point))
+      ILP_Object ilptmp373;
+      ilptmp373 = self1;
+      if (ILP_IsA (ilptmp373, Point))
 	{
-	  return ilptmp761->_content.asInstance.field[0];
+	  return ilptmp373->_content.asInstance.field[0];
 	}
       else
 	{
-	  return ILP_UnknownFieldError ("x", ilptmp761);
+	  return ILP_UnknownFieldError ("x", ilptmp373);
 	}
     }
   }
@@ -159,15 +159,15 @@ ilp__color1_4 (ILP_Closure ilp_useless, ILP_Object self3)
 
   {
     {
-      ILP_Object ilptmp762;
-      ilptmp762 = self3;
-      if (ILP_IsA (ilptmp762, PointColore))
+      ILP_Object ilptmp374;
+      ilptmp374 = self3;
+      if (ILP_IsA (ilptmp374, PointColore))
 	{
-	  return ilptmp762->_content.asInstance.field[2];
+	  return ilptmp374->_content.asInstance.field[2];
 	}
       else
 	{
-	  return ILP_UnknownFieldError ("color", ilptmp762);
+	  return ILP_UnknownFieldError ("color", ilptmp374);
 	}
     }
   }
@@ -183,15 +183,15 @@ ilp__color2_6 (ILP_Closure ilp_useless, ILP_Object self5)
 
   {
     {
-      ILP_Object ilptmp763;
-      ilptmp763 = self5;
-      if (ILP_IsA (ilptmp763, PointLarge))
+      ILP_Object ilptmp375;
+      ilptmp375 = self5;
+      if (ILP_IsA (ilptmp375, PointLarge))
 	{
-	  return ilptmp763->_content.asInstance.field[2];
+	  return ilptmp375->_content.asInstance.field[2];
 	}
       else
 	{
-	  return ILP_UnknownFieldError ("taille", ilptmp763);
+	  return ILP_UnknownFieldError ("taille", ilptmp375);
 	}
     }
   }
@@ -202,42 +202,42 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp764;
-    ILP_Object ilptmp765;
+    ILP_Object ilptmp376;
+    ILP_Object ilptmp377;
     {
-      ILP_Object ilptmp766;
-      ILP_Object ilptmp767;
-      ILP_Object ilptmp768;
-      ILP_Object ilptmp769;
-      ilptmp767 = ILP_Integer2ILP (11);
-      ilptmp768 = ILP_Integer2ILP (22);
-      ilptmp769 = ILP_String2ILP ("red");
-      ilptmp766 = ILP_MakeInstance (PointColore);
-      ilptmp766->_content.asInstance.field[0] = ilptmp767;
-      ilptmp766->_content.asInstance.field[1] = ilptmp768;
-      ilptmp766->_content.asInstance.field[2] = ilptmp769;
-      ilptmp764 = ilptmp766;
+      ILP_Object ilptmp378;
+      ILP_Object ilptmp379;
+      ILP_Object ilptmp380;
+      ILP_Object ilptmp381;
+      ilptmp379 = ILP_Integer2ILP (11);
+      ilptmp380 = ILP_Integer2ILP (22);
+      ilptmp381 = ILP_String2ILP ("red");
+      ilptmp378 = ILP_MakeInstance (PointColore);
+      ilptmp378->_content.asInstance.field[0] = ilptmp379;
+      ilptmp378->_content.asInstance.field[1] = ilptmp380;
+      ilptmp378->_content.asInstance.field[2] = ilptmp381;
+      ilptmp376 = ilptmp378;
     }
     {
-      ILP_Object ilptmp770;
-      ILP_Object ilptmp771;
-      ILP_Object ilptmp772;
-      ILP_Object ilptmp773;
-      ilptmp771 = ILP_Integer2ILP (33);
-      ilptmp772 = ILP_Integer2ILP (44);
-      ilptmp773 = ILP_Integer2ILP (835);
-      ilptmp770 = ILP_MakeInstance (PointLarge);
-      ilptmp770->_content.asInstance.field[0] = ilptmp771;
-      ilptmp770->_content.asInstance.field[1] = ilptmp772;
-      ilptmp770->_content.asInstance.field[2] = ilptmp773;
-      ilptmp765 = ilptmp770;
+      ILP_Object ilptmp382;
+      ILP_Object ilptmp383;
+      ILP_Object ilptmp384;
+      ILP_Object ilptmp385;
+      ilptmp383 = ILP_Integer2ILP (33);
+      ilptmp384 = ILP_Integer2ILP (44);
+      ilptmp385 = ILP_Integer2ILP (835);
+      ilptmp382 = ILP_MakeInstance (PointLarge);
+      ilptmp382->_content.asInstance.field[0] = ilptmp383;
+      ilptmp382->_content.asInstance.field[1] = ilptmp384;
+      ilptmp382->_content.asInstance.field[2] = ilptmp385;
+      ilptmp377 = ilptmp382;
     }
 
     {
-      ILP_Object pc7 = ilptmp764;
-      ILP_Object pl8 = ilptmp765;
+      ILP_Object pc7 = ilptmp376;
+      ILP_Object pl8 = ilptmp377;
       {
-	ILP_Object ilptmp774;
+	ILP_Object ilptmp386;
 	{
 	  struct ILP_catcher *current_catcher = ILP_current_catcher;
 	  struct ILP_catcher new_catcher;
@@ -245,12 +245,12 @@ ilp_program ()
 	    {
 	      ILP_establish_catcher (&new_catcher);
 	      {
-		ILP_general_function ilptmp775;
-		ILP_Object ilptmp776;
-		ilptmp776 = pc7;
-		ILP_find_method_cached (ilptmp776, &ILP_object_color2_method,
-					1, ilptmp775);
-		ilptmp774 = ilptmp775 (NULL, ilptmp776);
+		ILP_general_function ilptmp387;
+		ILP_Object ilptmp388;
+		ilptmp388 = pc7;
+		ilptmp387 =
+		  ILP_find_method (ilptmp388, &ILP_object_color2_method, 1);
+		ilptmp386 = ilptmp387 (NULL, ilptmp388);
 	      }
 	      ILP_current_exception = NULL;
 	    };
@@ -272,10 +272,10 @@ ilp_program ()
 	    {
 	      ILP_throw (ILP_current_exception);
 	    };
-	  ilptmp774 = ILP_FALSE;
+	  ilptmp386 = ILP_FALSE;
 	}
-	ilptmp774 = ILP_Integer2ILP (836);
-	return ilptmp774;
+	ilptmp386 = ILP_Integer2ILP (836);
+	return ilptmp386;
       }
 
     }

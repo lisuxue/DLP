@@ -48,20 +48,20 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp9;
+    ILP_Object ilptmp3;
     {
-      ILP_Object ilptmp10;
-      ILP_Object ilptmp11;
-      ILP_Object ilptmp12;
-      ilptmp11 = ILP_Integer2ILP (11);
-      ilptmp12 = ILP_Integer2ILP (22);
-      ilptmp10 = ILP_MakeInstance (Point);
-      ilptmp10->_content.asInstance.field[0] = ilptmp11;
-      ilptmp10->_content.asInstance.field[1] = ilptmp12;
-      ilptmp9 = ilptmp10;
+      ILP_Object ilptmp4;
+      ILP_Object ilptmp5;
+      ILP_Object ilptmp6;
+      ilptmp5 = ILP_Integer2ILP (11);
+      ilptmp6 = ILP_Integer2ILP (22);
+      ilptmp4 = ILP_MakeInstance (Point);
+      ilptmp4->_content.asInstance.field[0] = ilptmp5;
+      ilptmp4->_content.asInstance.field[1] = ilptmp6;
+      ilptmp3 = ilptmp4;
     }
-    ilptmp9 = ILP_Integer2ILP (808);
-    return ilptmp9;
+    ilptmp3 = ILP_Integer2ILP (808);
+    return ilptmp3;
   }
 
 }

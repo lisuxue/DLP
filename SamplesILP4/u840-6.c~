@@ -78,12 +78,12 @@ ILP_Object ilp_CurrentArguments[1];
 
 {
 { 
-  ILP_Object ilptmp787; 
-ilptmp787 = self1; 
-if ( ILP_IsA(ilptmp787, Point ) ) {
-return ilptmp787->_content.asInstance.field[0];
+  ILP_Object ilptmp389; 
+ilptmp389 = self1; 
+if ( ILP_IsA(ilptmp389, Point ) ) {
+return ilptmp389->_content.asInstance.field[0];
 } else {
-return  ILP_UnknownFieldError("x", ilptmp787);
+return  ILP_UnknownFieldError("x", ilptmp389);
 }
 }
 }
@@ -98,19 +98,19 @@ ILP_Object ilp_CurrentArguments[1];
 
 {
 { 
-  ILP_Object ilptmp788; 
-  ILP_Object ilptmp789; 
+  ILP_Object ilptmp390; 
+  ILP_Object ilptmp391; 
 { 
-  ILP_Object ilptmp790; 
-ilptmp790 = self3; 
-if ( ILP_IsA(ilptmp790, Point2D ) ) {
-ilptmp788 = ilptmp790->_content.asInstance.field[1];
+  ILP_Object ilptmp392; 
+ilptmp392 = self3; 
+if ( ILP_IsA(ilptmp392, Point2D ) ) {
+ilptmp390 = ilptmp392->_content.asInstance.field[1];
 } else {
-ilptmp788 =  ILP_UnknownFieldError("y", ilptmp790);
+ilptmp390 =  ILP_UnknownFieldError("y", ilptmp392);
 }
 }
-ilptmp789 = ILP_FindAndCallSuperMethod(); 
-return ILP_Times(ilptmp788, ilptmp789);
+ilptmp391 = ILP_FindAndCallSuperMethod(); 
+return ILP_Times(ilptmp390, ilptmp391);
 } 
 }
 }
@@ -119,31 +119,31 @@ return ILP_Times(ilptmp788, ilptmp789);
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp791; 
+  ILP_Object ilptmp393; 
 { 
-  ILP_Object ilptmp792; 
-  ILP_Object ilptmp793; 
-  ILP_Object ilptmp794; 
-ilptmp793 = ILP_Integer2ILP(10); 
-ilptmp794 = ILP_Integer2ILP(84); 
-ilptmp792 = ILP_MakeInstance(Point2D); 
-ilptmp792->_content.asInstance.field[0] = ilptmp793; 
-ilptmp792->_content.asInstance.field[1] = ilptmp794; 
-ilptmp791 = ilptmp792; 
+  ILP_Object ilptmp394; 
+  ILP_Object ilptmp395; 
+  ILP_Object ilptmp396; 
+ilptmp395 = ILP_Integer2ILP(10); 
+ilptmp396 = ILP_Integer2ILP(84); 
+ilptmp394 = ILP_MakeInstance(Point2D); 
+ilptmp394->_content.asInstance.field[0] = ilptmp395; 
+ilptmp394->_content.asInstance.field[1] = ilptmp396; 
+ilptmp393 = ilptmp394; 
 }
 
   {
-    ILP_Object pc5 = ilptmp791;
+    ILP_Object pc5 = ilptmp393;
 { struct ILP_catcher* current_catcher = ILP_current_catcher; 
   struct ILP_catcher new_catcher;  
   if ( 0 == setjmp(new_catcher._jmp_buf) ) { 
       ILP_establish_catcher(&new_catcher); 
 { 
-  ILP_general_function ilptmp795; 
-  ILP_Object ilptmp796; 
-ilptmp796 = pc5; 
-ILP_find_method_cached(ilptmp796, &ILP_object_m1_method, 1,ilptmp795);
-return ilptmp795(NULL, ilptmp796);
+  ILP_general_function ilptmp397; 
+  ILP_Object ilptmp398; 
+ilptmp398 = pc5; 
+ilptmp397 = ILP_find_method(ilptmp398, &ILP_object_m1_method, 1);
+return ilptmp397(NULL, ilptmp398);
 }
       ILP_current_exception = NULL; 
   }; 

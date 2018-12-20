@@ -62,22 +62,21 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_general_function ilptmp993;
-    ILP_Object ilptmp994;
+    ILP_general_function ilptmp494;
+    ILP_Object ilptmp495;
     {
-      ILP_Object ilptmp995;
-      ILP_Object ilptmp996;
-      ILP_Object ilptmp997;
-      ilptmp996 = ILP_Integer2ILP (11);
-      ilptmp997 = ILP_Integer2ILP (22);
-      ilptmp995 = ILP_MakeInstance (Po_3aint);
-      ilptmp995->_content.asInstance.field[0] = ilptmp996;
-      ilptmp995->_content.asInstance.field[1] = ilptmp997;
-      ilptmp994 = ilptmp995;
+      ILP_Object ilptmp496;
+      ILP_Object ilptmp497;
+      ILP_Object ilptmp498;
+      ilptmp497 = ILP_Integer2ILP (11);
+      ilptmp498 = ILP_Integer2ILP (22);
+      ilptmp496 = ILP_MakeInstance (Po_3aint);
+      ilptmp496->_content.asInstance.field[0] = ilptmp497;
+      ilptmp496->_content.asInstance.field[1] = ilptmp498;
+      ilptmp495 = ilptmp496;
     }
-    ILP_find_method_cached (ilptmp994, &ILP_object_print_method, 1,
-			    ilptmp993);
-    return ilptmp993 (NULL, ilptmp994);
+    ilptmp494 = ILP_find_method (ilptmp495, &ILP_object_print_method, 1);
+    return ilptmp494 (NULL, ilptmp495);
   }
 
 }

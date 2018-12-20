@@ -105,15 +105,15 @@ ilp__m2_3 (ILP_Closure ilp_useless, ILP_Object self1, ILP_Object u2)
 
   {
     {
-      ILP_general_function ilptmp577;
-      ILP_Object ilptmp578;
-      ILP_Object ilptmp579;
-      ILP_Object ilptmp580;
-      ilptmp578 = self1;
-      ilptmp579 = ILP_Integer2ILP (1);
-      ilptmp580 = u2;
-      ILP_find_method_cached (ilptmp578, &ILP_object_m1_method, 3, ilptmp577);
-      return ilptmp577 (NULL, ilptmp578, ilptmp579, ilptmp580);
+      ILP_general_function ilptmp278;
+      ILP_Object ilptmp279;
+      ILP_Object ilptmp280;
+      ILP_Object ilptmp281;
+      ilptmp279 = self1;
+      ilptmp280 = ILP_Integer2ILP (1);
+      ilptmp281 = u2;
+      ilptmp278 = ILP_find_method (ilptmp279, &ILP_object_m1_method, 3);
+      return ilptmp278 (NULL, ilptmp279, ilptmp280, ilptmp281);
     }
   }
 }
@@ -131,45 +131,45 @@ ilp__m1_7 (ILP_Closure ilp_useless,
 
   {
     {
-      ILP_Object ilptmp581;
-      ILP_Object ilptmp582;
+      ILP_Object ilptmp282;
+      ILP_Object ilptmp283;
       {
-	ILP_Object ilptmp583;
-	ILP_Object ilptmp584;
-	ilptmp583 = z5;
+	ILP_Object ilptmp284;
+	ILP_Object ilptmp285;
+	ilptmp284 = z5;
 	{
-	  ILP_Object ilptmp585;
-	  ilptmp585 = self4;
-	  if (ILP_IsA (ilptmp585, Point))
+	  ILP_Object ilptmp286;
+	  ilptmp286 = self4;
+	  if (ILP_IsA (ilptmp286, Point))
 	    {
-	      ilptmp584 = ilptmp585->_content.asInstance.field[0];
+	      ilptmp285 = ilptmp286->_content.asInstance.field[0];
 	    }
 	  else
 	    {
-	      ilptmp584 = ILP_UnknownFieldError ("x", ilptmp585);
+	      ilptmp285 = ILP_UnknownFieldError ("x", ilptmp286);
 	    }
 	}
-	ilptmp581 = ILP_Times (ilptmp583, ilptmp584);
+	ilptmp282 = ILP_Times (ilptmp284, ilptmp285);
       }
       {
-	ILP_Object ilptmp586;
-	ILP_Object ilptmp587;
-	ilptmp586 = t6;
+	ILP_Object ilptmp287;
+	ILP_Object ilptmp288;
+	ilptmp287 = t6;
 	{
-	  ILP_Object ilptmp588;
-	  ilptmp588 = self4;
-	  if (ILP_IsA (ilptmp588, Point))
+	  ILP_Object ilptmp289;
+	  ilptmp289 = self4;
+	  if (ILP_IsA (ilptmp289, Point))
 	    {
-	      ilptmp587 = ilptmp588->_content.asInstance.field[1];
+	      ilptmp288 = ilptmp289->_content.asInstance.field[1];
 	    }
 	  else
 	    {
-	      ilptmp587 = ILP_UnknownFieldError ("y", ilptmp588);
+	      ilptmp288 = ILP_UnknownFieldError ("y", ilptmp289);
 	    }
 	}
-	ilptmp582 = ILP_Times (ilptmp586, ilptmp587);
+	ilptmp283 = ILP_Times (ilptmp287, ilptmp288);
       }
-      return ILP_Plus (ilptmp581, ilptmp582);
+      return ILP_Plus (ilptmp282, ilptmp283);
     }
   }
 }
@@ -187,11 +187,11 @@ ilp__m1_11 (ILP_Closure ilp_useless,
 
   {
     {
-      ILP_Object ilptmp589;
-      ILP_Object ilptmp590;
-      ilptmp589 = ILP_Integer2ILP (826);
-      ilptmp590 = z9;
-      return ILP_Plus (ilptmp589, ilptmp590);
+      ILP_Object ilptmp290;
+      ILP_Object ilptmp291;
+      ilptmp290 = ILP_Integer2ILP (826);
+      ilptmp291 = z9;
+      return ILP_Plus (ilptmp290, ilptmp291);
     }
   }
 }
@@ -201,33 +201,32 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp591;
+    ILP_Object ilptmp292;
     {
-      ILP_Object ilptmp592;
-      ILP_Object ilptmp593;
-      ILP_Object ilptmp594;
-      ILP_Object ilptmp595;
-      ilptmp593 = ILP_Integer2ILP (11);
-      ilptmp594 = ILP_Integer2ILP (22);
-      ilptmp595 = ILP_String2ILP ("red");
-      ilptmp592 = ILP_MakeInstance (PointColore);
-      ilptmp592->_content.asInstance.field[0] = ilptmp593;
-      ilptmp592->_content.asInstance.field[1] = ilptmp594;
-      ilptmp592->_content.asInstance.field[2] = ilptmp595;
-      ilptmp591 = ilptmp592;
+      ILP_Object ilptmp293;
+      ILP_Object ilptmp294;
+      ILP_Object ilptmp295;
+      ILP_Object ilptmp296;
+      ilptmp294 = ILP_Integer2ILP (11);
+      ilptmp295 = ILP_Integer2ILP (22);
+      ilptmp296 = ILP_String2ILP ("red");
+      ilptmp293 = ILP_MakeInstance (PointColore);
+      ilptmp293->_content.asInstance.field[0] = ilptmp294;
+      ilptmp293->_content.asInstance.field[1] = ilptmp295;
+      ilptmp293->_content.asInstance.field[2] = ilptmp296;
+      ilptmp292 = ilptmp293;
     }
 
     {
-      ILP_Object pc12 = ilptmp591;
+      ILP_Object pc12 = ilptmp292;
       {
-	ILP_general_function ilptmp596;
-	ILP_Object ilptmp597;
-	ILP_Object ilptmp598;
-	ilptmp597 = pc12;
-	ilptmp598 = ILP_Integer2ILP (2);
-	ILP_find_method_cached (ilptmp597, &ILP_object_m2_method, 2,
-				ilptmp596);
-	return ilptmp596 (NULL, ilptmp597, ilptmp598);
+	ILP_general_function ilptmp297;
+	ILP_Object ilptmp298;
+	ILP_Object ilptmp299;
+	ilptmp298 = pc12;
+	ilptmp299 = ILP_Integer2ILP (2);
+	ilptmp297 = ILP_find_method (ilptmp298, &ILP_object_m2_method, 2);
+	return ilptmp297 (NULL, ilptmp298, ilptmp299);
       }
 
     }

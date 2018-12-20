@@ -70,27 +70,27 @@ return ILP_Integer2ILP(812);
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp61; 
+  ILP_Object ilptmp28; 
 { 
-  ILP_Object ilptmp62; 
-  ILP_Object ilptmp63; 
-  ILP_Object ilptmp64; 
-ilptmp63 = ILP_Integer2ILP(11); 
-ilptmp64 = ILP_Integer2ILP(22); 
-ilptmp62 = ILP_MakeInstance(Point); 
-ilptmp62->_content.asInstance.field[0] = ilptmp63; 
-ilptmp62->_content.asInstance.field[1] = ilptmp64; 
-ilptmp61 = ilptmp62; 
+  ILP_Object ilptmp29; 
+  ILP_Object ilptmp30; 
+  ILP_Object ilptmp31; 
+ilptmp30 = ILP_Integer2ILP(11); 
+ilptmp31 = ILP_Integer2ILP(22); 
+ilptmp29 = ILP_MakeInstance(Point); 
+ilptmp29->_content.asInstance.field[0] = ilptmp30; 
+ilptmp29->_content.asInstance.field[1] = ilptmp31; 
+ilptmp28 = ilptmp29; 
 }
 
   {
-    ILP_Object point3 = ilptmp61;
+    ILP_Object point3 = ilptmp28;
 { 
-  ILP_general_function ilptmp65; 
-  ILP_Object ilptmp66; 
-ilptmp66 = point3; 
-ILP_find_method_cached(ilptmp66, &ILP_object_longueur_method, 1,ilptmp65);
-return ilptmp65(NULL, ilptmp66);
+  ILP_general_function ilptmp32; 
+  ILP_Object ilptmp33; 
+ilptmp33 = point3; 
+ilptmp32 = ILP_find_method(ilptmp33, &ILP_object_longueur_method, 1);
+return ilptmp32(NULL, ilptmp33);
 }
 
   }

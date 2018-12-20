@@ -66,14 +66,14 @@ ILP_Object ilp_CurrentArguments[1];
 
 {
 { 
-  ILP_Object ilptmp1282; 
+  ILP_Object ilptmp633; 
 { 
-  ILP_Object ilptmp1283; 
-ilptmp1283 =  ILP_String2ILP("print@Point2D"); 
-ilptmp1282 = ILP_print(ilptmp1283);
+  ILP_Object ilptmp634; 
+ilptmp634 =  ILP_String2ILP("print@Point2D"); 
+ilptmp633 = ILP_print(ilptmp634);
 }
-ilptmp1282 = ILP_FindAndCallSuperMethod(); 
-return ilptmp1282; 
+ilptmp633 = ILP_FindAndCallSuperMethod(); 
+return ilptmp633; 
 } 
 }
 }
@@ -82,36 +82,36 @@ return ilptmp1282;
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp1284; 
+  ILP_Object ilptmp635; 
 { 
-  ILP_Object ilptmp1285; 
-  ILP_Object ilptmp1286; 
-  ILP_Object ilptmp1287; 
-ilptmp1286 = ILP_Integer2ILP(8492); 
-ilptmp1287 = ILP_Integer2ILP(1); 
-ilptmp1285 = ILP_MakeInstance(Point2D); 
-ilptmp1285->_content.asInstance.field[0] = ilptmp1286; 
-ilptmp1285->_content.asInstance.field[1] = ilptmp1287; 
-ilptmp1284 = ilptmp1285; 
+  ILP_Object ilptmp636; 
+  ILP_Object ilptmp637; 
+  ILP_Object ilptmp638; 
+ilptmp637 = ILP_Integer2ILP(8492); 
+ilptmp638 = ILP_Integer2ILP(1); 
+ilptmp636 = ILP_MakeInstance(Point2D); 
+ilptmp636->_content.asInstance.field[0] = ilptmp637; 
+ilptmp636->_content.asInstance.field[1] = ilptmp638; 
+ilptmp635 = ilptmp636; 
 }
 
   {
-    ILP_Object pc3 = ilptmp1284;
+    ILP_Object pc3 = ilptmp635;
 { struct ILP_catcher* current_catcher = ILP_current_catcher; 
   struct ILP_catcher new_catcher;  
   if ( 0 == setjmp(new_catcher._jmp_buf) ) { 
       ILP_establish_catcher(&new_catcher); 
 { 
-  ILP_Object ilptmp1288; 
+  ILP_Object ilptmp639; 
 { 
-  ILP_general_function ilptmp1289; 
-  ILP_Object ilptmp1290; 
-ilptmp1290 = pc3; 
-ILP_find_method_cached(ilptmp1290, &ILP_object_print_method, 1,ilptmp1289);
-ilptmp1288 = ilptmp1289(NULL, ilptmp1290);
+  ILP_general_function ilptmp640; 
+  ILP_Object ilptmp641; 
+ilptmp641 = pc3; 
+ilptmp640 = ILP_find_method(ilptmp641, &ILP_object_print_method, 1);
+ilptmp639 = ilptmp640(NULL, ilptmp641);
 }
-ilptmp1288 = ILP_Integer2ILP(8492); 
-return ilptmp1288; 
+ilptmp639 = ILP_Integer2ILP(8492); 
+return ilptmp639; 
 } 
       ILP_current_exception = NULL; 
   }; 

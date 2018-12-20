@@ -112,19 +112,19 @@ ILP_Object ilp_CurrentArguments[3];
 
 {
 { 
-  ILP_Object ilptmp956; 
-  ILP_Object ilptmp957; 
-ilptmp956 = tt2; 
+  ILP_Object ilptmp468; 
+  ILP_Object ilptmp469; 
+ilptmp468 = tt2; 
 { 
-  ILP_Object ilptmp958; 
-ilptmp958 = self1; 
-if ( ILP_IsA(ilptmp958, Point ) ) {
-ilptmp957 = ilptmp958->_content.asInstance.field[0];
+  ILP_Object ilptmp470; 
+ilptmp470 = self1; 
+if ( ILP_IsA(ilptmp470, Point ) ) {
+ilptmp469 = ilptmp470->_content.asInstance.field[0];
 } else {
-ilptmp957 =  ILP_UnknownFieldError("x", ilptmp958);
+ilptmp469 =  ILP_UnknownFieldError("x", ilptmp470);
 }
 }
-return ILP_Times(ilptmp956, ilptmp957);
+return ILP_Times(ilptmp468, ilptmp469);
 } 
 }
 }
@@ -142,25 +142,25 @@ ILP_Object ilp_CurrentArguments[3];
 
 {
 { 
-  ILP_Object ilptmp959; 
-  ILP_Object ilptmp960; 
+  ILP_Object ilptmp471; 
+  ILP_Object ilptmp472; 
 { 
-  ILP_Object ilptmp961; 
-  ILP_Object ilptmp962; 
-ilptmp961 = uuu7; 
+  ILP_Object ilptmp473; 
+  ILP_Object ilptmp474; 
+ilptmp473 = uuu7; 
 { 
-  ILP_Object ilptmp963; 
-ilptmp963 = self5; 
-if ( ILP_IsA(ilptmp963, Point2D ) ) {
-ilptmp962 = ilptmp963->_content.asInstance.field[1];
+  ILP_Object ilptmp475; 
+ilptmp475 = self5; 
+if ( ILP_IsA(ilptmp475, Point2D ) ) {
+ilptmp474 = ilptmp475->_content.asInstance.field[1];
 } else {
-ilptmp962 =  ILP_UnknownFieldError("y", ilptmp963);
+ilptmp474 =  ILP_UnknownFieldError("y", ilptmp475);
 }
 }
-ilptmp959 = ILP_Times(ilptmp961, ilptmp962);
+ilptmp471 = ILP_Times(ilptmp473, ilptmp474);
 } 
-ilptmp960 = ILP_FindAndCallSuperMethod(); 
-return ILP_Plus(ilptmp959, ilptmp960);
+ilptmp472 = ILP_FindAndCallSuperMethod(); 
+return ILP_Plus(ilptmp471, ilptmp472);
 } 
 }
 }
@@ -178,19 +178,19 @@ ILP_Object ilp_CurrentArguments[3];
 
 {
 { 
-  ILP_Object ilptmp964; 
-  ILP_Object ilptmp965; 
+  ILP_Object ilptmp476; 
+  ILP_Object ilptmp477; 
 { 
-  ILP_Object ilptmp966; 
-ilptmp966 = self9; 
-if ( ILP_IsA(ilptmp966, Point3D ) ) {
-ilptmp964 = ilptmp966->_content.asInstance.field[2];
+  ILP_Object ilptmp478; 
+ilptmp478 = self9; 
+if ( ILP_IsA(ilptmp478, Point3D ) ) {
+ilptmp476 = ilptmp478->_content.asInstance.field[2];
 } else {
-ilptmp964 =  ILP_UnknownFieldError("z", ilptmp966);
+ilptmp476 =  ILP_UnknownFieldError("z", ilptmp478);
 }
 }
-ilptmp965 = ILP_FindAndCallSuperMethod(); 
-return ILP_Plus(ilptmp964, ilptmp965);
+ilptmp477 = ILP_FindAndCallSuperMethod(); 
+return ILP_Plus(ilptmp476, ilptmp477);
 } 
 }
 }
@@ -199,38 +199,38 @@ return ILP_Plus(ilptmp964, ilptmp965);
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp967; 
+  ILP_Object ilptmp479; 
 { 
-  ILP_Object ilptmp968; 
-  ILP_Object ilptmp969; 
-  ILP_Object ilptmp970; 
-  ILP_Object ilptmp971; 
-ilptmp969 = ILP_Integer2ILP(400); 
-ilptmp970 = ILP_Integer2ILP(10); 
-ilptmp971 = ILP_Integer2ILP(15); 
-ilptmp968 = ILP_MakeInstance(Point3D); 
-ilptmp968->_content.asInstance.field[0] = ilptmp969; 
-ilptmp968->_content.asInstance.field[1] = ilptmp970; 
-ilptmp968->_content.asInstance.field[2] = ilptmp971; 
-ilptmp967 = ilptmp968; 
+  ILP_Object ilptmp480; 
+  ILP_Object ilptmp481; 
+  ILP_Object ilptmp482; 
+  ILP_Object ilptmp483; 
+ilptmp481 = ILP_Integer2ILP(400); 
+ilptmp482 = ILP_Integer2ILP(10); 
+ilptmp483 = ILP_Integer2ILP(15); 
+ilptmp480 = ILP_MakeInstance(Point3D); 
+ilptmp480->_content.asInstance.field[0] = ilptmp481; 
+ilptmp480->_content.asInstance.field[1] = ilptmp482; 
+ilptmp480->_content.asInstance.field[2] = ilptmp483; 
+ilptmp479 = ilptmp480; 
 }
 
   {
-    ILP_Object pc13 = ilptmp967;
+    ILP_Object pc13 = ilptmp479;
 { struct ILP_catcher* current_catcher = ILP_current_catcher; 
   struct ILP_catcher new_catcher;  
   if ( 0 == setjmp(new_catcher._jmp_buf) ) { 
       ILP_establish_catcher(&new_catcher); 
 { 
-  ILP_general_function ilptmp972; 
-  ILP_Object ilptmp973; 
-  ILP_Object ilptmp974; 
-  ILP_Object ilptmp975; 
-ilptmp973 = pc13; 
-ilptmp974 = ILP_Integer2ILP(2); 
-ilptmp975 = ILP_Integer2ILP(3); 
-ILP_find_method_cached(ilptmp973, &ILP_object_m1_method, 3,ilptmp972);
-return ilptmp972(NULL, ilptmp973, ilptmp974, ilptmp975);
+  ILP_general_function ilptmp484; 
+  ILP_Object ilptmp485; 
+  ILP_Object ilptmp486; 
+  ILP_Object ilptmp487; 
+ilptmp485 = pc13; 
+ilptmp486 = ILP_Integer2ILP(2); 
+ilptmp487 = ILP_Integer2ILP(3); 
+ilptmp484 = ILP_find_method(ilptmp485, &ILP_object_m1_method, 3);
+return ilptmp484(NULL, ilptmp485, ilptmp486, ilptmp487);
 }
       ILP_current_exception = NULL; 
   }; 

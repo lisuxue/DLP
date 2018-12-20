@@ -67,14 +67,14 @@ ILP_Object ilp_CurrentArguments[1];
 
 {
 { 
-  ILP_Object ilptmp1262; 
+  ILP_Object ilptmp622; 
 { 
-  ILP_Object ilptmp1263; 
-ilptmp1263 =  ILP_String2ILP("print@Point"); 
-ilptmp1262 = ILP_print(ilptmp1263);
+  ILP_Object ilptmp623; 
+ilptmp623 =  ILP_String2ILP("print@Point"); 
+ilptmp622 = ILP_print(ilptmp623);
 }
-ilptmp1262 = ILP_FindAndCallSuperMethod(); 
-return ilptmp1262; 
+ilptmp622 = ILP_FindAndCallSuperMethod(); 
+return ilptmp622; 
 } 
 }
 }
@@ -88,14 +88,14 @@ ILP_Object ilp_CurrentArguments[1];
 
 {
 { 
-  ILP_Object ilptmp1264; 
+  ILP_Object ilptmp624; 
 { 
-  ILP_Object ilptmp1265; 
-ilptmp1265 =  ILP_String2ILP("print@Point2D"); 
-ilptmp1264 = ILP_print(ilptmp1265);
+  ILP_Object ilptmp625; 
+ilptmp625 =  ILP_String2ILP("print@Point2D"); 
+ilptmp624 = ILP_print(ilptmp625);
 }
-ilptmp1264 = ILP_FindAndCallSuperMethod(); 
-return ilptmp1264; 
+ilptmp624 = ILP_FindAndCallSuperMethod(); 
+return ilptmp624; 
 } 
 }
 }
@@ -104,36 +104,36 @@ return ilptmp1264;
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp1266; 
+  ILP_Object ilptmp626; 
 { 
-  ILP_Object ilptmp1267; 
-  ILP_Object ilptmp1268; 
-  ILP_Object ilptmp1269; 
-ilptmp1268 = ILP_Integer2ILP(8491); 
-ilptmp1269 = ILP_Integer2ILP(1); 
-ilptmp1267 = ILP_MakeInstance(Point2D); 
-ilptmp1267->_content.asInstance.field[0] = ilptmp1268; 
-ilptmp1267->_content.asInstance.field[1] = ilptmp1269; 
-ilptmp1266 = ilptmp1267; 
+  ILP_Object ilptmp627; 
+  ILP_Object ilptmp628; 
+  ILP_Object ilptmp629; 
+ilptmp628 = ILP_Integer2ILP(8491); 
+ilptmp629 = ILP_Integer2ILP(1); 
+ilptmp627 = ILP_MakeInstance(Point2D); 
+ilptmp627->_content.asInstance.field[0] = ilptmp628; 
+ilptmp627->_content.asInstance.field[1] = ilptmp629; 
+ilptmp626 = ilptmp627; 
 }
 
   {
-    ILP_Object pc5 = ilptmp1266;
+    ILP_Object pc5 = ilptmp626;
 { struct ILP_catcher* current_catcher = ILP_current_catcher; 
   struct ILP_catcher new_catcher;  
   if ( 0 == setjmp(new_catcher._jmp_buf) ) { 
       ILP_establish_catcher(&new_catcher); 
 { 
-  ILP_Object ilptmp1270; 
+  ILP_Object ilptmp630; 
 { 
-  ILP_general_function ilptmp1271; 
-  ILP_Object ilptmp1272; 
-ilptmp1272 = pc5; 
-ILP_find_method_cached(ilptmp1272, &ILP_object_print_method, 1,ilptmp1271);
-ilptmp1270 = ilptmp1271(NULL, ilptmp1272);
+  ILP_general_function ilptmp631; 
+  ILP_Object ilptmp632; 
+ilptmp632 = pc5; 
+ilptmp631 = ILP_find_method(ilptmp632, &ILP_object_print_method, 1);
+ilptmp630 = ilptmp631(NULL, ilptmp632);
 }
-ilptmp1270 = ILP_Integer2ILP(8491); 
-return ilptmp1270; 
+ilptmp630 = ILP_Integer2ILP(8491); 
+return ilptmp630; 
 } 
       ILP_current_exception = NULL; 
   }; 

@@ -114,33 +114,33 @@ ilp__longueur_2 (ILP_Closure ilp_useless, ILP_Object self1)
 
   {
     {
-      ILP_Object ilptmp453;
-      ILP_Object ilptmp454;
+      ILP_Object ilptmp216;
+      ILP_Object ilptmp217;
       {
-	ILP_Object ilptmp455;
-	ilptmp455 = self1;
-	if (ILP_IsA (ilptmp455, Point))
+	ILP_Object ilptmp218;
+	ilptmp218 = self1;
+	if (ILP_IsA (ilptmp218, Point))
 	  {
-	    ilptmp453 = ilptmp455->_content.asInstance.field[0];
+	    ilptmp216 = ilptmp218->_content.asInstance.field[0];
 	  }
 	else
 	  {
-	    ilptmp453 = ILP_UnknownFieldError ("x", ilptmp455);
+	    ilptmp216 = ILP_UnknownFieldError ("x", ilptmp218);
 	  }
       }
       {
-	ILP_Object ilptmp456;
-	ilptmp456 = self1;
-	if (ILP_IsA (ilptmp456, Point))
+	ILP_Object ilptmp219;
+	ilptmp219 = self1;
+	if (ILP_IsA (ilptmp219, Point))
 	  {
-	    ilptmp454 = ilptmp456->_content.asInstance.field[1];
+	    ilptmp217 = ilptmp219->_content.asInstance.field[1];
 	  }
 	else
 	  {
-	    ilptmp454 = ILP_UnknownFieldError ("y", ilptmp456);
+	    ilptmp217 = ILP_UnknownFieldError ("y", ilptmp219);
 	  }
       }
-      return ILP_Plus (ilptmp453, ilptmp454);
+      return ILP_Plus (ilptmp216, ilptmp217);
     }
   }
 }
@@ -158,45 +158,45 @@ ilp__m1_6 (ILP_Closure ilp_useless,
 
   {
     {
-      ILP_Object ilptmp457;
-      ILP_Object ilptmp458;
+      ILP_Object ilptmp220;
+      ILP_Object ilptmp221;
       {
-	ILP_Object ilptmp459;
-	ILP_Object ilptmp460;
-	ilptmp459 = z4;
+	ILP_Object ilptmp222;
+	ILP_Object ilptmp223;
+	ilptmp222 = z4;
 	{
-	  ILP_Object ilptmp461;
-	  ilptmp461 = self3;
-	  if (ILP_IsA (ilptmp461, Point))
+	  ILP_Object ilptmp224;
+	  ilptmp224 = self3;
+	  if (ILP_IsA (ilptmp224, Point))
 	    {
-	      ilptmp460 = ilptmp461->_content.asInstance.field[0];
+	      ilptmp223 = ilptmp224->_content.asInstance.field[0];
 	    }
 	  else
 	    {
-	      ilptmp460 = ILP_UnknownFieldError ("x", ilptmp461);
+	      ilptmp223 = ILP_UnknownFieldError ("x", ilptmp224);
 	    }
 	}
-	ilptmp457 = ILP_Times (ilptmp459, ilptmp460);
+	ilptmp220 = ILP_Times (ilptmp222, ilptmp223);
       }
       {
-	ILP_Object ilptmp462;
-	ILP_Object ilptmp463;
-	ilptmp462 = t5;
+	ILP_Object ilptmp225;
+	ILP_Object ilptmp226;
+	ilptmp225 = t5;
 	{
-	  ILP_Object ilptmp464;
-	  ilptmp464 = self3;
-	  if (ILP_IsA (ilptmp464, Point))
+	  ILP_Object ilptmp227;
+	  ilptmp227 = self3;
+	  if (ILP_IsA (ilptmp227, Point))
 	    {
-	      ilptmp463 = ilptmp464->_content.asInstance.field[1];
+	      ilptmp226 = ilptmp227->_content.asInstance.field[1];
 	    }
 	  else
 	    {
-	      ilptmp463 = ILP_UnknownFieldError ("y", ilptmp464);
+	      ilptmp226 = ILP_UnknownFieldError ("y", ilptmp227);
 	    }
 	}
-	ilptmp458 = ILP_Times (ilptmp462, ilptmp463);
+	ilptmp221 = ILP_Times (ilptmp225, ilptmp226);
       }
-      return ILP_Plus (ilptmp457, ilptmp458);
+      return ILP_Plus (ilptmp220, ilptmp221);
     }
   }
 }
@@ -212,11 +212,11 @@ ilp__m2_9 (ILP_Closure ilp_useless, ILP_Object self7, ILP_Object x8)
 
   {
     {
-      ILP_Object ilptmp465;
-      ILP_Object ilptmp466;
-      ilptmp465 = ILP_Integer2ILP (823);
-      ilptmp466 = x8;
-      return ILP_Plus (ilptmp465, ilptmp466);
+      ILP_Object ilptmp228;
+      ILP_Object ilptmp229;
+      ilptmp228 = ILP_Integer2ILP (823);
+      ilptmp229 = x8;
+      return ILP_Plus (ilptmp228, ilptmp229);
     }
   }
 }
@@ -226,33 +226,32 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp467;
+    ILP_Object ilptmp230;
     {
-      ILP_Object ilptmp468;
-      ILP_Object ilptmp469;
-      ILP_Object ilptmp470;
-      ILP_Object ilptmp471;
-      ilptmp469 = ILP_Integer2ILP (11);
-      ilptmp470 = ILP_Integer2ILP (22);
-      ilptmp471 = ILP_String2ILP ("red");
-      ilptmp468 = ILP_MakeInstance (PointColore);
-      ilptmp468->_content.asInstance.field[0] = ilptmp469;
-      ilptmp468->_content.asInstance.field[1] = ilptmp470;
-      ilptmp468->_content.asInstance.field[2] = ilptmp471;
-      ilptmp467 = ilptmp468;
+      ILP_Object ilptmp231;
+      ILP_Object ilptmp232;
+      ILP_Object ilptmp233;
+      ILP_Object ilptmp234;
+      ilptmp232 = ILP_Integer2ILP (11);
+      ilptmp233 = ILP_Integer2ILP (22);
+      ilptmp234 = ILP_String2ILP ("red");
+      ilptmp231 = ILP_MakeInstance (PointColore);
+      ilptmp231->_content.asInstance.field[0] = ilptmp232;
+      ilptmp231->_content.asInstance.field[1] = ilptmp233;
+      ilptmp231->_content.asInstance.field[2] = ilptmp234;
+      ilptmp230 = ilptmp231;
     }
 
     {
-      ILP_Object pc10 = ilptmp467;
+      ILP_Object pc10 = ilptmp230;
       {
-	ILP_general_function ilptmp472;
-	ILP_Object ilptmp473;
-	ILP_Object ilptmp474;
-	ilptmp473 = pc10;
-	ilptmp474 = ILP_Integer2ILP (1);
-	ILP_find_method_cached (ilptmp473, &ILP_object_m2_method, 2,
-				ilptmp472);
-	return ilptmp472 (NULL, ilptmp473, ilptmp474);
+	ILP_general_function ilptmp235;
+	ILP_Object ilptmp236;
+	ILP_Object ilptmp237;
+	ilptmp236 = pc10;
+	ilptmp237 = ILP_Integer2ILP (1);
+	ilptmp235 = ILP_find_method (ilptmp236, &ILP_object_m2_method, 2);
+	return ilptmp235 (NULL, ilptmp236, ilptmp237);
       }
 
     }
